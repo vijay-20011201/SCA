@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCA - Premium Material Handling Solutions</title>
+  <link rel="icon" type="image/png" href="banner/logo/SCA logo1.png">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS for scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link href="index.html" rel="about">
+
+  
+
+  <style>
+    :root{
+      --brand-dark: #0b0b10;       /* deep background */
+      --brand-dark-2: #111217;
+      --accent: #ff6a00;          /* primary orange */
+      --accent-600: #ff6a00;
+      --muted: #aeb3be;
+      --glass: rgba(255,255,255,0.04);
+      --card-shadow: 0 10px 30px rgba(11,11,16,0.5);
+      --container-width: 1200px;
+    }
+
+    html,body{height:100%;}
+    body{
+      background: linear-gradient(180deg,var(--brand-dark), #0f1114 120%);
+      color: #e6eef8;
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* NAV */
+    .navbar{
+      background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .navbar-brand img{ height:44px; }
+    .nav-link{ color: #dfe8f8 !important; font-weight:500; }
+    .nav-link:hover{ color: var(--accent) !important; }
+
+   /* DROPDOWN FIXES */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      background: #fff !important;
+      border: 1px solid rgba(255,107,53,0.2) !important;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 0.5rem 0;
+      margin-top: 0 !important; /* Remove gap between toggle and menu */
+      min-width: 220px;
+      top: 100% !important;
+      left: 0 !important;
+    }
+
+    .dropdown-item {
+      color: #333 !important;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.3s ease;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .dropdown-item:hover {
+      background: linear-gradient(90deg, rgba(255,106,0,0.1), rgba(255,106,0,0.15));
+      color: var(--accent) !important;
+    }
+
+    /* Desktop dropdown behavior - hover and click */
+    @media (min-width: 992px) {
+      /* Show dropdown on hover */
+      .dropdown:hover > .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      /* Show dropdown on click (when .show class is added) */
+      .dropdown.show > .dropdown-menu {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Add padding to dropdown area to prevent gap issues */
+      .dropdown-toggle {
+        padding-bottom: 0.5rem !important;
+      }
+    }
+    
+    /* Mobile dropdown behavior - click only */
+    @media (max-width: 991px) {
+      .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+ /* ==================== HERO SECTION ==================== */
+        .hero-section {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+            /*background-image: url("images/sca2.jpg"); */         
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 60px;
+        }
+
+        .hero-text {
+            text-align: center;
+            color: white;
+        }
+
+        .hero-text h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ==================== ABOUT COMPANY SECTION ==================== */
+        .about-company {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transform: rotate(2deg);
+            transition: transform 0.3s ease;
+        }
+
+        .about-image:hover {
+            transform: rotate(0deg) scale(1.05);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ==================== VISION MISSION VALUES SECTION ==================== */
+        .vmv-section {
+            padding: 80px 5%;
+            background: rgb(0, 0, 0);
+        }
+
+        .vmv-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .vmv-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .vmv-card {
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .vmv-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            transform: scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        .vmv-card:hover::before {
+            transform: scale(1);
+        }
+
+        .vmv-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.6);
+        }
+
+        .vmv-card h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .vmv-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        /* ==================== WHY SCA SECTION ==================== */
+        .why-sca {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+            color: rgb(0, 0, 0);
+        }
+
+        .why-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .why-container h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .why-container p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            opacity: 0.95;
+        }
+
+        /* ==================== OUR CLIENTS SECTION ==================== */
+        .clients-section {
+            padding: 80px 5%;
+            background: #000000;
+            overflow: hidden;
+        }
+
+        .clients-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 50px;
+        }
+
+        .clients-slider {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .clients-track {
+            display: flex;
+            gap: 60px;
+            animation: scroll 20s linear infinite;
+        }
+
+        .client-logo {
+            flex-shrink: 0;
+            width: 180px;
+            height: 120px;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .client-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .client-logo img {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ==================== TEAM SECTION ==================== */
+        .team-section {
+            padding: 80px 5%;
+            background: white;
+        }
+
+        .team-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 60px;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+            border-color: #667eea;
+        }
+
+        .team-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            overflow: hidden;
+            border: 5px solid #ff6b35;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+            position: relative;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-card h3 {
+            font-size: 1.6rem;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .team-designation {
+            font-size: 1rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .team-company {
+            font-size: 1.1rem;
+            color: #764ba2;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .team-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* ==================== RESPONSIVE DESIGN ==================== */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-container,
+            .vmv-cards,
+            .team-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container" style="max-width:var(--container-width);">
+      <a class="navbar-brand" href="index.html">
+        <img src="banner/logo/SCA logo1.png" alt="SCA Logo">
+      </a>
+      <button class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
+        <span class="navbar-toggler-icon" style="display:inline-block; width:22px; height:14px; background: linear-gradient(180deg,#fff,#ddd);"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="About.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="product.html">Fork Lift Range</a></li>
+              <li><a class="dropdown-item" href="forklift.html">Fork Lift Trucks</a></li>
+              <li><a class="dropdown-item" href="reach-stacker.html">Reach Stackers</a></li>
+              <li><a class="dropdown-item" href="cranes.html">Industrial Cranes</a></li>
+              <li><a class="dropdown-item" href="excavators.html">Excavators</a></li>
+              <li><a class="dropdown-item" href="loaders.html">Wheel Loaders</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link px-3" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section">
+        <div class="hero-text">
+            <h1>ABOUT US</h1>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT COMPANY SECTION ==================== -->
+    <section class="about-company">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>About Our Company</h2>
+                <p>We are a leading technology company dedicated to transforming businesses through innovative solutions and cutting-edge technology. With years of experience in the industry, we've helped hundreds of clients achieve their digital transformation goals.</p>
+                <p>Our team of expert professionals brings together diverse skills and extensive knowledge to deliver exceptional results. We pride ourselves on our commitment to excellence, customer satisfaction, and continuous innovation.</p>
+                <p>From infrastructure management to system administration, we provide comprehensive solutions tailored to meet your unique business needs.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/sca14.jpg" alt="Team Working">
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== VISION MISSION VALUES SECTION ==================== -->
+    <section class="vmv-section">
+        <div class="vmv-container">
+            <div class="vmv-cards">
+                <div class="vmv-card">
+                    <h3>Vision</h3>
+                    <p>To be the global leader in technology solutions, empowering businesses worldwide to achieve unprecedented growth through digital innovation and excellence.</p>
+                </div>
+                <div class="vmv-card">
+                    <h3>Mission</h3>
+                    <p>To deliver world-class technology services that drive business transformation, enhance operational efficiency, and create lasting value for our clients and stakeholders.</p>
+                </div>
+                <div class="vmv-card">
+                    <h3>Values</h3>
+                    <p>Integrity, Innovation, Excellence, Collaboration, and Customer-Centricity form the foundation of everything we do. We believe in building lasting relationships through trust and quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== WHY SCA SECTION ==================== -->
+    <section class="why-sca">
+        <div class="why-container">
+            <h2>Why SCA?</h2>
+            <p>At SCA, we don't just provide services – we build partnerships. Our unique approach combines technical expertise with deep industry knowledge to deliver solutions that truly matter. We understand that every business is different, which is why we take the time to understand your specific challenges and goals.</p>
+            <p>With a proven track record of success, cutting-edge technology stack, and a team of passionate professionals, we're committed to helping you stay ahead in today's competitive landscape. Choose SCA for reliability, innovation, and results that exceed expectations.</p>
+        </div>
+    </section>
+
+    <!-- ==================== OUR CLIENTS SECTION ==================== -->
+    <section class="clients-section">
+        <h2>Our Clients</h2>
+        <div class="clients-slider">
+            <div class="clients-track">
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Client 1">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Client 3">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Client 4">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Client 5">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Client 1">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Client 2">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Client 3">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Client 4">
+                </div>
+                <div class="client-logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Client 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TEAM SECTION ==================== -->
+    <section class="team-section">
+        <h2>Our Team / Board Members</h2>
+        <div class="team-container">
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="" alt="Name 1">
+                </div>
+                <h3>nmae</h3>
+                <div class="team-designation">Designation</div>
+                <div class="team-company">Company</div>
+                <p class="team-description">Expert in infrastructure management with over 8 years of experience in optimizing IT systems and ensuring seamless operations across enterprise environments.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="" alt="Name 2">
+                </div>
+                <h3>Name</h3>
+                <div class="team-designation">Designation</div>
+                <div class="team-company">Company</div>
+                <p class="team-description">Skilled system administrator specializing in network security and server management, ensuring robust and reliable IT infrastructure for complex business needs.</p>
+            </div>
+
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="" alt="Name 3">
+                </div>
+                <h3>Name</h3>
+                <div class="team-designation">Designation</div>
+                <div class="team-company">Company</div>
+                <p class="team-description">Experienced in maintaining enterprise-level systems with a focus on automation, security compliance, and delivering high-availability solutions for global operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS + AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+
+    // Enhanced dropdown functionality - works on both hover and click
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        
+        // Click functionality
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close other dropdowns
+          dropdowns.forEach(other => {
+            if (other !== dropdown) {
+              other.classList.remove('show');
+              other.querySelector('.dropdown-menu').classList.remove('show');
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle('show');
+          menu.classList.toggle('show');
+        });
+        
+        // Hover functionality for desktop
+        if (window.innerWidth >= 992) {
+          dropdown.addEventListener('mouseenter', function() {
+            dropdown.classList.add('show');
+            menu.classList.add('show');
+          });
+          
+          dropdown.addEventListener('mouseleave', function() {
+            dropdown.classList.remove('show');
+            menu.classList.remove('show');
+          });
+        }
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('show');
+            dropdown.querySelector('.dropdown-menu').classList.remove('show');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

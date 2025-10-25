@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCA - Premium Material Handling Solutions</title>
+  <link rel="icon" type="image/png" href="banner/logo/SCA logo1.png">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS for scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link href="index.html" rel="about">
+
+  
+
+  <style>
+    :root{
+      --brand-dark: #0b0b10;       /* deep background */
+      --brand-dark-2: #111217;
+      --accent: #ff6a00;          /* primary orange */
+      --accent-600: #ff6a00;
+      --muted: #aeb3be;
+      --glass: rgba(255,255,255,0.04);
+      --card-shadow: 0 10px 30px rgba(11,11,16,0.5);
+      --container-width: 1200px;
+    }
+
+    html,body{height:100%;}
+    body{
+      background: linear-gradient(180deg,var(--brand-dark), #0f1114 120%);
+      color: #e6eef8;
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* NAV */
+    .navbar{
+      background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .navbar-brand img{ height:44px; }
+    .nav-link{ color: #dfe8f8 !important; font-weight:500; }
+    .nav-link:hover{ color: var(--accent) !important; }
+
+    /* ========== 1. INTRO PRESENTATION SPACE ========== */
+        .intro-presentation-space {
+            background: linear-gradient(135deg, #000000 0%, #2d2d2d 100%);
+            color: white;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-presentation-space::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.03) 2px,
+                rgba(255,255,255,0.03) 4px
+            );
+        }
+
+        .presentation-content-holder {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .featured-machinery-display {
+            width: 350px;
+            height: 350px;
+            background: white;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #666;
+            transition: transform 0.3s ease;
+            border: 3px solid rgba(255,255,255,0.1);
+        }
+
+        .featured-machinery-display:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .machinery-name-banner {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .catch-phrase-line {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: #cccccc;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .conversion-buttons-cluster {
+            margin-top: 2rem;
+        }
+
+        .interactive-cta-link {
+            display: inline-block;
+            padding: 18px 45px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            border: 2px solid white;
+        }
+
+        .interactive-cta-link:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+
+        .interactive-cta-link.ghost-variant {
+            background: transparent;
+            color: white;
+        }
+
+        .interactive-cta-link.ghost-variant:hover {
+            background: white;
+            color: black;
+        }
+
+        /* ========== 2. INFORMATION BRIEFING SEGMENT ========== */
+        .information-briefing-segment {
+            padding: 100px 2rem;
+            background: white;
+            position: relative;
+        }
+
+        .centered-title-element {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .centered-title-element::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: black;
+            margin: 1rem auto 0;
+        }
+
+        .intro-description-block {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: #333;
+            text-align: center;
+        }
+
+        .quick-facts-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+
+        .fact-item-component {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .fact-item-component strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: black;
+        }
+
+        /* ========== 3. ATTRIBUTES PRESENTATION ZONE ========== */
+        .attributes-presentation-zone {
+            padding: 100px 2rem;
+            background: #000000;
+        }
+
+        .attributes-presentation-zone .centered-title-element {
+            color: white;
+        }
+
+        .attributes-presentation-zone .centered-title-element::after {
+            background: white;
+        }
+
+        .attributes-flex-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .attribute-display-panel {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .attribute-display-panel:hover {
+            transform: translateY(-10px);
+            border-color: white;
+            box-shadow: 0 15px 40px rgba(255,255,255,0.2);
+        }
+
+        .attribute-emblem {
+            width: 80px;
+            height: 80px;
+            background: black;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .attribute-name-label {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #c41e3a;
+        }
+
+        .attribute-explanation {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* ========== 4. SPECIFICATIONS REPOSITORY AREA ========== */
+        .specifications-repository-area {
+            padding: 100px 2rem;
+            background: white;
+        }
+
+        .repository-data-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            border-radius: 20px;
+            padding: 50px;
+            border: 3px solid black;
+        }
+
+        .repository-entries-matrix {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .single-spec-entry {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid black;
+        }
+
+        .entry-descriptor-tag {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .entry-content-data {
+            font-size: 1.2rem;
+            color: black;
+            font-weight: 500;
+        }
+
+        /* ========== 5. MEDIA COLLECTION SPACE ========== */
+        .media-collection-space {
+            padding: 100px 2rem;
+            background: #f8f8f8;
+        }
+
+        .collection-display-framework {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .media-placeholder-tile {
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #999;
+            font-size: 1rem;
+        }
+
+        .media-placeholder-tile:hover {
+            transform: scale(1.05);
+            border-color: black;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ========== 6. VALUE PROPOSITIONS SEGMENT ========== */
+        .value-propositions-segment {
+            padding: 100px 2rem;
+            background: black;
+            color: white;
+        }
+
+        .value-propositions-segment .centered-title-element {
+            color: white;
+        }
+
+        .value-propositions-segment .centered-title-element::after {
+            background: white;
+        }
+
+        .propositions-showcase-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .proposition-content-block {
+            text-align: center;
+        }
+
+        .proposition-sequence-number {
+            width: 60px;
+            height: 60px;
+            background: white;
+            color: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .proposition-title-text {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .proposition-description-copy {
+            color: #cccccc;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* ========== 7. ENGAGEMENT GATEWAY SECTION ========== */
+        .engagement-gateway-section {
+            padding: 100px 2rem;
+            background: white;
+        }
+
+        .gateway-submission-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            padding: 60px 50px;
+            border-radius: 20px;
+            border: 3px solid black;
+        }
+
+        .engagement-gateway-section .centered-title-element {
+            margin-bottom: 2rem;
+        }
+
+        .interactive-submission-form {
+            margin-top: 2rem;
+        }
+
+        .data-collection-unit {
+            margin-bottom: 25px;
+        }
+
+        .data-collection-unit label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .data-collection-unit input,
+        .data-collection-unit textarea,
+        .data-collection-unit select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .data-collection-unit input:focus,
+        .data-collection-unit textarea:focus,
+        .data-collection-unit select:focus {
+            outline: none;
+            border-color: black;
+        }
+
+        .data-collection-unit textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .final-action-trigger {
+            width: 100%;
+            padding: 18px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .final-action-trigger:hover {
+            background: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .machinery-name-banner {
+                font-size: 2.5rem;
+            }
+
+            .centered-title-element {
+                font-size: 2rem;
+            }
+
+            .featured-machinery-display {
+                width: 280px;
+                height: 280px;
+            }
+
+            .repository-data-container,
+            .gateway-submission-wrapper {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container" style="max-width:var(--container-width);">
+      <a class="navbar-brand" href="#">
+        <img src="banner/logo/SCA logo1.png" alt="SCA Logo">
+      </a>
+      <button class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
+        <span class="navbar-toggler-icon" style="display:inline-block; width:22px; height:14px; background: linear-gradient(180deg,#fff,#ddd);"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="About.html">About</a></li>
+          <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+                        <ul class="dropdown-menu" style="background: var(--light-bg); border: 1px solid rgba(255,107,53,0.2);">
+                            <li><a class="dropdown-item" href="forklift.html" style="color: var(--text-light);">Fork Lift Trucks</a></li>
+                            <li><a class="dropdown-item" href="reach-stacker.html" style="color: var(--text-light);">Reach Stackers</a></li>
+                            <li><a class="dropdown-item" href="cranes.html" style="color: var(--text-light);">Industrial Cranes</a></li>
+                            <li><a class="dropdown-item" href="excavators.html" style="color: var(--text-light);">Excavators</a></li>
+                            <li><a class="dropdown-item" href="loaders.html" style="color: var(--text-light);">Wheel Loaders</a></li>
+                        </ul>
+          <li class="nav-item"><a class="nav-link px-3" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Contact.html">Contact</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- ========== 1. INTRO PRESENTATION SPACE ========== -->
+    <section class="intro-presentation-space">
+        <div class="presentation-content-holder">
+            <div class="featured-machinery-display">
+                <img src="images/sca8.jpg" alt="Product" height="440" width="440">
+            </div>
+            <h1 class="machinery-name-banner">Hydraulic Excavator HD-360</h1>
+            <p class="catch-phrase-line">Unmatched Digging Power & Precision for Heavy Construction</p>
+            <div class="conversion-buttons-cluster">
+                <a href="#contact" class="interactive-cta-link">Get Quote</a>
+                <a href="#contact" class="interactive-cta-link ghost-variant">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 2. INFORMATION BRIEFING SEGMENT ========== -->
+    <section class="information-briefing-segment">
+        <h2 class="centered-title-element">Product Overview</h2>
+        <div class="intro-description-block">
+            <p>The Hydraulic Excavator HD-360 is a premium construction machine engineered for demanding excavation projects across construction sites, mining operations, and infrastructure development. Designed for contractors and construction companies who require maximum productivity and reliability, this excavator delivers exceptional digging force and smooth operation. It addresses the challenges of deep excavation, material loading, and site preparation with unmatched efficiency. Built with advanced hydraulic technology and operator-focused ergonomics, it's the ultimate choice for serious earthmoving operations.</p>
+        </div>
+        <div class="quick-facts-display">
+            <div class="fact-item-component">
+                <strong>What It Is</strong>
+                <p>Heavy-duty excavator</p>
+            </div>
+            <div class="fact-item-component">
+                <strong>Who It's For</strong>
+                <p>Construction & mining firms</p>
+            </div>
+            <div class="fact-item-component">
+                <strong>Problem It Solves</strong>
+                <p>Large-scale excavation needs</p>
+            </div>
+            <div class="fact-item-component">
+                <strong>Key Benefit</strong>
+                <p>Power, precision & reliability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 3. ATTRIBUTES PRESENTATION ZONE ========== -->
+    <section class="attributes-presentation-zone">
+        <h2 class="centered-title-element">Key Features</h2>
+        <div class="attributes-flex-layout">
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">💪</div>
+                <h3 class="attribute-name-label">Massive Digging Force</h3>
+                <p class="attribute-explanation">36-ton operating weight with exceptional breakout force for the toughest soil and rock conditions.</p>
+            </div>
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">🔧</div>
+                <h3 class="attribute-name-label">Advanced Hydraulics</h3>
+                <p class="attribute-explanation">State-of-the-art hydraulic system delivers smooth, precise control with maximum efficiency.</p>
+            </div>
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">🎮</div>
+                <h3 class="attribute-name-label">Intelligent Controls</h3>
+                <p class="attribute-explanation">Electronic control system with multiple work modes for different applications and conditions.</p>
+            </div>
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">🪟</div>
+                <h3 class="attribute-name-label">Panoramic Cabin</h3>
+                <p class="attribute-explanation">Spacious, climate-controlled operator station with 360-degree visibility and minimal blind spots.</p>
+            </div>
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">⛽</div>
+                <h3 class="attribute-name-label">Fuel Economy Mode</h3>
+                <p class="attribute-explanation">Intelligent engine management reduces fuel consumption by up to 20% without sacrificing performance.</p>
+            </div>
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">🔐</div>
+                <h3 class="attribute-name-label">Enhanced Safety</h3>
+                <p class="attribute-explanation">Multiple safety features including ROPS/FOPS certified cabin and emergency shutdown systems.</p>
+            </div>
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">📡</div>
+                <h3 class="attribute-name-label">Telematics System</h3>
+                <p class="attribute-explanation">Real-time machine monitoring, GPS tracking, and performance analytics via mobile app.</p>
+            </div>
+            <div class="attribute-display-panel">
+                <div class="attribute-emblem">🔨</div>
+                <h3 class="attribute-name-label">Attachment Ready</h3>
+                <p class="attribute-explanation">Quick-coupler system compatible with breakers, grapples, and specialized attachments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 4. SPECIFICATIONS REPOSITORY AREA ========== -->
+    <section class="specifications-repository-area">
+        <h2 class="centered-title-element">Technical Specifications</h2>
+        <div class="repository-data-container">
+            <div class="repository-entries-matrix">
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Model Number</div>
+                    <div class="entry-content-data">HD-360-ULTRA</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Operating Weight</div>
+                    <div class="entry-content-data">36,000 kg</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Engine Power</div>
+                    <div class="entry-content-data">260 HP Turbocharged</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Bucket Capacity</div>
+                    <div class="entry-content-data">1.8 cubic meters</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Max Digging Depth</div>
+                    <div class="entry-content-data">7.5 meters</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Max Reach</div>
+                    <div class="entry-content-data">11.2 meters</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Swing Speed</div>
+                    <div class="entry-content-data">10.5 RPM</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Travel Speed</div>
+                    <div class="entry-content-data">5.5 km/h</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Fuel Tank</div>
+                    <div class="entry-content-data">620 Liters</div>
+                </div>
+                <div class="single-spec-entry">
+                    <div class="entry-descriptor-tag">Warranty</div>
+                    <div class="entry-content-data">3 Years / 6000 Hours</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 5. MEDIA COLLECTION SPACE ========== -->
+    <section class="media-collection-space">
+        <h2 class="centered-title-element">Product Gallery</h2>
+        <div class="collection-display-framework">
+            <div class="media-placeholder-tile">Full Machine View</div>
+            <div class="media-placeholder-tile">Operator Cabin</div>
+            <div class="media-placeholder-tile">Boom & Arm Detail</div>
+            <div class="media-placeholder-tile">Undercarriage</div>
+            <div class="media-placeholder-tile">At Work Site</div>
+            <div class="media-placeholder-tile">Control Console</div>
+        </div>
+    </section>
+
+    <!-- ========== 6. VALUE PROPOSITIONS SEGMENT ========== -->
+    <section class="value-propositions-segment">
+        <h2 class="centered-title-element">Why Choose This Product</h2>
+        <div class="propositions-showcase-grid">
+            <div class="proposition-content-block">
+                <div class="proposition-sequence-number">1</div>
+                <h3 class="proposition-title-text">Uncompromising Reliability</h3>
+                <p class="proposition-description-copy">Built to withstand the harshest conditions with components tested beyond industry standards. Proven track record in extreme environments worldwide.</p>
+            </div>
+            <div class="proposition-content-block">
+                <div class="proposition-sequence-number">2</div>
+                <h3 class="proposition-title-text">Maximum Uptime</h3>
+                <p class="proposition-description-copy">Superior engineering means fewer breakdowns and longer service intervals. Lower total cost of ownership with better productivity.</p>
+            </div>
+            <div class="proposition-content-block">
+                <div class="proposition-sequence-number">3</div>
+                <h3 class="proposition-title-text">Full Service Support</h3>
+                <p class="proposition-description-copy">Nationwide parts availability and certified service technicians. Comprehensive operator training and ongoing technical assistance included.</p>
+            </div>
+            <div class="proposition-content-block">
+                <div class="proposition-sequence-number">4</div>
+                <h3 class="proposition-title-text">Flexible Solutions</h3>
+                <p class="proposition-description-copy">Fast delivery with professional commissioning. Customizable financing packages and comprehensive warranty coverage available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 7. ENGAGEMENT GATEWAY SECTION ========== -->
+    <section class="engagement-gateway-section" id="contact">
+        <div class="gateway-submission-wrapper">
+            <h2 class="centered-title-element">Request a Quote</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Complete the form and our heavy equipment specialists will provide detailed pricing and specifications within 24 hours.</p>
+            <form class="interactive-submission-form">
+                <div class="data-collection-unit">
+                    <label for="username">Full Name *</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your full name">
+                </div>
+                <div class="data-collection-unit">
+                    <label for="useremail">Email Address *</label>
+                    <input type="email" id="useremail" name="useremail" required placeholder="your.email@example.com">
+                </div>
+                <div class="data-collection-unit">
+                    <label for="userphone">Phone Number *</label>
+                    <input type="tel" id="userphone" name="userphone" required placeholder="+91 XXXXX XXXXX">
+                </div>
+                <div class="data-collection-unit">
+                    <label for="quantity">Quantity Needed</label>
+                    <select id="quantity" name="quantity">
+                        <option>1 Unit</option>
+                        <option>2 Units</option>
+                        <option>3-5 Units</option>
+                        <option>5+ Units</option>
+                    </select>
+                </div>
+                <div class="data-collection-unit">
+                    <label for="notes">Project Details</label>
+                    <textarea id="notes" name="notes" placeholder="Tell us about your project requirements and application..."></textarea>
+                </div>
+                <button type="submit" class="final-action-trigger">Request Quote Now</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>

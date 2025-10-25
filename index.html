@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCA - Premium Material Handling Solutions</title>
+  <link rel="icon" type="image/png" href="banner/logo/SCA logo1.png">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS for scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --brand-dark: #0b0b10;       /* deep background */
+      --brand-dark-2: #111217;
+      --accent: #ff6a00;          /* primary orange */
+      --accent-600: #ff6a00;
+      --muted: #aeb3be;
+      --glass: rgba(255,255,255,0.04);
+      --card-shadow: 0 10px 30px rgba(11,11,16,0.5);
+      --container-width: 1200px;
+    }
+
+    html,body{height:100%;}
+    body{
+      background: linear-gradient(180deg,var(--brand-dark), #0f1114 120%);
+      color: #e6eef8;
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* NAV */
+    .navbar{
+      background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .navbar-brand img{ height:44px; }
+    .nav-link{ color: #dfe8f8 !important; font-weight:500; }
+    .nav-link:hover{ color: var(--accent) !important; }
+
+    /* DROPDOWN FIXES */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      background: #fff !important;
+      border: 1px solid rgba(255,107,53,0.2) !important;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      padding: 0.5rem 0;
+      margin-top: 0 !important; /* Remove gap between toggle and menu */
+      min-width: 220px;
+      top: 100% !important;
+      left: 0 !important;
+    }
+
+    .dropdown-item {
+      color: #333 !important;
+      padding: 0.75rem 1.5rem;
+      transition: all 0.3s ease;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+    }
+
+    .dropdown-item:hover {
+      background: linear-gradient(90deg, rgba(255,106,0,0.1), rgba(255,106,0,0.15));
+      color: var(--accent) !important;
+    }
+
+    /* Desktop dropdown behavior - hover and click */
+    @media (min-width: 992px) {
+      /* Show dropdown on hover */
+      .dropdown:hover > .dropdown-menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      /* Show dropdown on click (when .show class is added) */
+      .dropdown.show > .dropdown-menu {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Add padding to dropdown area to prevent gap issues */
+      .dropdown-toggle {
+        padding-bottom: 0.5rem !important;
+      }
+    }
+    
+    /* Mobile dropdown behavior - click only */
+    @media (max-width: 991px) {
+      .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+        border: none;
+        box-shadow: none;
+      }
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 72vh;
+      display: flex;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+    }
+    .hero video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      filter:brightness(0.55) saturate(0.95);
+      z-index:0;
+    }
+    .hero .overlay{
+      position:absolute;
+      inset:0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.65) 60%);
+      z-index:1;
+    }
+    .hero .hero-inner{
+      position:relative;
+      z-index:2;
+      width:100%;
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 6rem 1.5rem;
+    }
+    .hero h1{
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height:1.02;
+      font-weight:700;
+      letter-spacing: -0.02em;
+      color: #fff;
+      text-shadow: 0 12px 35px rgba(0,0,0,0.6);
+    }
+    .hero .lead{
+      color: #c6d2e9;
+      opacity:0.95;
+      margin-top: 0.8rem;
+      font-size: 1.05rem;
+    }
+    .btn-accent{
+      background: linear-gradient(90deg, var(--accent), #fd0202);
+      border: none;
+      color: #19110a;
+      padding: 0.85rem 1.6rem;
+      font-weight:700;
+      border-radius: 999px;
+      box-shadow: 0 12px 30px rgba(255, 0, 0, 0.342);
+    }
+
+    .btns-accent{
+      background: linear-gradient(90deg, #02adfd);
+      border: none;
+      color: #19110a;
+      padding: 0.85rem 1.6rem;
+      font-weight:700;
+      border-radius: 999px;
+      box-shadow: 0 12px 30px rgba(0, 60, 255, 0.342);
+    }
+    .btn-outline-light-custom{
+      border-radius:999px;
+      border:1px solid rgba(218, 7, 7, 0.12);
+      color: #000000;
+      padding: 0.7rem 1.4rem;
+      background: linear-gradient(#fffbfa);
+    }
+
+    /* quick stats */
+    .stats{
+      display:flex;
+      gap:1.25rem;
+      margin-top: 1.6rem;
+      flex-wrap:wrap;
+    }
+    .stat{
+      background: linear-gradient(180deg, rgba(255, 248, 248, 0), rgba(6, 6, 6, 0.01));
+      padding: 0.6rem 1rem;
+      border-radius:10px;
+      border:1px solid rgba(255, 255, 255, 0.04);
+      min-width: 140px;
+      text-align:center;
+    }
+    .stat h4{ margin:0; color: #fff; font-weight:700; }
+    .stat p{ margin:0; color: var(--muted); font-size:0.88rem; }
+
+    /* under hero About section */
+    .containeer {
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 60px 20px;
+            background: rgb(255, 255, 255);
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header-section h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .header-section p {
+            font-size: 1.2rem;
+            color: #000000;
+        }
+
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .text-content h2 {
+            font-size: 2rem;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            font-size: 1.1rem;
+            color: #000000;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+
+        .image-content {
+            position: relative;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(249, 101, 27, 0.15);
+        }
+
+        .card-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: #f0e7ff;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #222121;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 968px) {
+            .content-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .cards-section {
+                grid-template-columns: 1fr;
+            }
+
+            .header-section h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+/* Hero Section overlap image - fills entire card */
+.card-modern .product-img {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-modern .card-body {
+  padding: 20px;
+  background: #000000;
+}
+
+.card-modern .card-title {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-modern .card-text {
+  color: #666666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Cards overlap layout - 3D perspective style */
+.cards-overlap-container {
+  position: relative;
+  height: 430px;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.card-overlap {
+  position: absolute;
+  width: 240px;
+}
+
+/* Left card - angled left */
+.card-overlap:nth-child(1) {
+  top: 40%;
+  left: -80px;
+  transform: translateY(-50%) translateZ(-100px) rotateY(25deg) scale(0.85);
+  z-index: 1;
+}
+
+/* Center card - main focus */
+.card-overlap:nth-child(2) {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(50px) scale(1.1);
+  z-index: 3;
+}
+
+/* Right card - angled right */
+.card-overlap:nth-child(3) {
+  top: 40%;
+  right: -80px;
+  transform: translateY(-50%) translateZ(-100px) rotateY(-25deg) scale(0.85);
+  z-index: 1;
+}
+
+/* OUR Products*/
+    .containers {
+            max-width: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 60px 20px;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .inner-containers {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .product-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        .image-stack {
+            position: relative;
+            height: 400px;
+        }
+
+        .image-stack img {
+            position: absolute;
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(246, 243, 243, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .image-stack img:nth-child(1) {
+            top: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .image-stack img:nth-child(2) {
+            top: 60px;
+            left: 80px;
+            z-index: 2;
+        }
+
+        .image-stack img:nth-child(3) {
+            top: 120px;
+            left: 160px;
+            z-index: 1;
+        }
+
+        .image-stack:hover img:nth-child(1) {
+            transform: translate(-10px, -10px);
+        }
+
+        .image-stack:hover img:nth-child(2) {
+            transform: translate(-5px, -5px);
+        }
+
+        .image-stack:hover img:nth-child(3) {
+            transform: translate(5px, 5px);
+        }
+
+        .content-block h2 {
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+
+        .content-block p {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .product-button {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            margin-top: 25px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .product-button:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        @media (max-width: 968px) {
+            .product-section {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .image-stack {
+                height: 350px;
+                margin: 0 auto;
+                max-width: 400px;
+            }
+
+            .image-stack img {
+                width: 240px;
+                height: 180px;
+            }
+
+            .section-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-block h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+
+  /* Gallery */
+    .gallery-section {
+            padding: 60px 0;
+            background: #ffffff;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: #000000;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .gallery-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .gallery-track {
+            display: flex;
+            width: fit-content;
+            animation: scroll 25s linear infinite;
+        }
+
+        .gallery-track:hover {
+            animation-play-state: paused;
+        }
+
+        .gallery-item {
+            flex-shrink: 0;
+            width: 400px;
+            height: 300px;
+            margin: 0 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                width: 300px;
+                height: 225px;
+            }
+
+            .gallery-title {
+                font-size: 36px;
+            }
+        }
+
+/* Our Clients */
+    .gallerys-section {
+            padding: 60px 0;
+            background: #101010;
+        }
+
+        .gallerys-title {
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffffff00;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+            
+        }
+
+        .gallerys-wrapper {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+        }
+
+        .gallerys-track {
+            display: flex;
+            width: fit-content;
+            animation: scroll 25s linear infinite;
+        }
+
+        .gallerys-track:hover {
+            animation-play-state: paused;
+        }
+
+        .gallerys-item {
+            flex-shrink: 0;
+            width: 400px;
+            height: 300px;
+            margin: 0 15px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .gallerys-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .gallerys-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallerys-item {
+                width: 300px;
+                height: 225px;
+            }
+
+            .gallerys-title {
+                font-size: 36px;
+            }
+        }
+
+    /* timeline */
+    .timeline{
+      position:relative;
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:20px;
+      top:0;
+      bottom:0;
+      width:4px;
+      background: linear-gradient(180deg, var(--accent), #ff9b4a);
+      border-radius:4px;
+    }
+    .timeline-item{
+      position:relative;
+      padding:1rem 1rem 1rem 3.5rem;
+      margin-bottom:1.1rem;
+      background: rgba(255,255,255,0.02);
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .timeline-item::before{
+      content:"";
+      position:absolute;
+      left:6px;
+      top:18px;
+      width:14px; height:14px;
+      border-radius:50%;
+      background: #fff;
+      box-shadow: 0 0 0 6px rgba(255,106,0,0.12);
+    }
+    .timeline-item h5{ margin-bottom:4px; color:#fff; font-weight:700; }
+    .timeline-item p{ color:var(--muted); margin:0; font-size:0.95rem; }
+
+    /* footer */
+    footer{
+      background: linear-gradient(180deg,#071018,#08121a);
+      color: #dfeeff;
+      padding: 3.2rem 1rem;
+      border-top: 1px solid rgba(255,255,255,0.03);
+    }
+    .footer a{ color: #dfeeff; text-decoration:none; }
+    .footer a:hover{ color: var(--accent); }
+
+    /* contact form */
+    .form-control:focus{ box-shadow:none; border-color: rgba(255,106,0,0.85); }
+
+    /* responsive tweaks */
+    @media (max-width: 768px){
+      .hero{ min-height:64vh; padding-bottom:2rem; }
+      .product-img{ height:180px; }
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container" style="max-width:var(--container-width);">
+      <a class="navbar-brand" href="index.html">
+        <img src="banner/logo/SCA logo1.png" alt="SCA Logo">
+      </a>
+      <button class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
+        <span class="navbar-toggler-icon" style="display:inline-block; width:22px; height:14px; background: linear-gradient(180deg,#fff,#ddd);"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="About.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="product.html">Fork Lift Range</a></li>
+              <li><a class="dropdown-item" href="forklift.html">Fork Lift Trucks</a></li>
+              <li><a class="dropdown-item" href="reach-stacker.html">Reach Stackers</a></li>
+              <li><a class="dropdown-item" href="cranes.html">Industrial Cranes</a></li>
+              <li><a class="dropdown-item" href="excavators.html">Excavators</a></li>
+              <li><a class="dropdown-item" href="loaders.html">Wheel Loaders</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link px-3" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" role="banner">
+    <!-- Replace src with your video file path. It's muted and autoplay - make sure browser autoplay policies satisfied -->
+    <video autoplay muted loop playsinline poster="banner/banner.jpg" aria-hidden="true">
+      <source src="scavideo.mp4" type="video/mp4">
+      <!-- fallback image shown automatically -->
+    </video>
+
+  <div class="overlay" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h1><span style="color:var(--accent)">Powerful</span> Material Handling Solutions</h1>
+                <p class="lead">Innovative forklifts, reachstackers and electric heavy equipment to maximize uptime and sustainability.</p>
+                
+                <div class="mt-3 d-flex flex-wrap align-items-center gap-2">
+                    <a class="btn btn-accent me-2" href="products.html">Explore Products-></a>
+                    <a class="btn btns-accent me-2" href="Services.html">EXplore Services -></a>
+                    <a class="btn btn-outline-light-custom" href="#contact">Contact Us</a>
+                </div>
+                
+                <div class="stats mt-4">
+                    <div class="stat">
+                        <h4>2012</h4>
+                        <p>Since</p>
+                    </div>
+                    <div class="stat">
+                        <h4>1–35t</h4>
+                        <p>Forklift range</p>
+                    </div>
+                    <div class="stat">
+                        <h4>ISO</h4>
+                        <p>9001:2015</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-5 d-none d-lg-block">
+          <div class="cards-overlap-container">
+            <div class="card-modern card-overlap">
+              <img src="images/sca2.jpg" alt="M Series" class="product-img">
+              <div class="card-body">
+                
+              </div>
+            </div>
+            
+            <div class="card-modern card-overlap">
+              <img src="images/sca5.jpg" alt="H Series" class="product-img">
+              <div class="card-body">
+               
+              </div>
+            </div>
+            
+            <div class="card-modern card-overlap">
+              <img src="images/sca12.jpg" alt="CS08" class="product-img">
+              <div class="card-body">
+               
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="containeer-section">
+    <div class="containeer">
+        <!-- Header Section -->
+        <div class="header-section">
+            <h1>About SCA</h1>
+            <p>SCA Heavy Equipment Pvt Ltd — manufacturing excellence since 2012</p>
+        </div>
+
+        <!-- Content Section with Text and Image -->
+        <div class="content-section">
+            <div class="text-content">
+                <h2>Our Story</h2>
+                <p>Since 2012, SCA Heavy Equipment has been at the forefront of manufacturing innovation, delivering world-class material handling solutions to industries across the globe.</p>
+                <p>We specialize in creating durable, reliable equipment that transforms how businesses handle their operations. Our commitment to quality and customer satisfaction drives everything we do.</p>
+                <p>From our state-of-the-art facility in Peenya, Bangalore, we serve customers worldwide with precision-engineered solutions tailored to their unique needs.</p>
+                <a href="#" class="cta-button">Learn More About Us</a>
+            </div>
+            <div class="image-content">
+              <video width="550" height="500" controls>
+                    <source src="images/About video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <!-- Three Cards Section -->
+        <div class="cards-section">
+            <div class="card">
+                <div class="card-icon">🏭</div>
+                <p>SCA manufactures Fork Lift Trucks, Empty Container Handlers, Reach Stackers, and Pushback Tractors. ISO 9001:2015 certified, SCA provides value-added services and reliable solutions for customers worldwide.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <p>Lead in sustainable material handling & improve productivity. Manufacturing hub: Peenya, Bangalore. Focus: durability, reliability and innovative engineering.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">💡</div>
+                <p>Decarbonized equipment, AI assistance & digital uptime solutions. Committed to excellence and providing cutting-edge technology for modern material handling needs.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+ <!-- OUR PRODUCTS -->
+    <div class="containers">
+      <div class="inner-containers"></div>
+        <!-- Section Header -->
+        <div class="section-header">
+            <h1>Our Products</h1>
+        </div>
+
+        <!-- Section 1: Images Left, Content Right -->
+        <div class="product-section">
+            <div class="image-stack">
+                <img src="images/Sca1.jpg" alt="Forklift">
+                <img src="images/sca2.jpg" alt="Warehouse Equipment">
+                <img src="images/sca3.jpg" alt="Heavy Machinery">
+            </div>
+            <div class="content-block">
+                <h2>Fork Lift Trucks</h2>
+                <p>Our state-of-the-art fork lift trucks are engineered for maximum efficiency and reliability. Designed to handle heavy loads with precision, these machines are perfect for warehouses, distribution centers, and manufacturing facilities.</p>
+                <p>With advanced safety features and ergonomic controls, our fork lifts ensure operator comfort while maintaining the highest standards of productivity and performance.</p>
+                <a href="forklift.html" class="product-button">Explore Fork Lifts</a>
+            </div>
+        </div>
+
+        <!-- Section 2: Content Left, Images Right -->
+        <div class="product-section">
+            <div class="content-block">
+                <h2>Empty Container Handlers</h2>
+                <p>Specifically designed for port operations and container yards, our empty container handlers offer unmatched speed and efficiency in stacking and moving containers.</p>
+                <p>Built with robust construction and intelligent load management systems, these handlers reduce operational costs while increasing throughput in demanding environments.</p>
+                <a href="reach-stacker.html" class="product-button">View Container Handlers</a>
+            </div>
+            <div class="image-stack">
+                <img src="images/Sca4.jpg" alt="Container Handler">
+                <img src="images/sca5.jpg" alt="Port Equipment">
+                <img src="images/sca6.jpg" alt="Shipping Container">
+            </div>
+        </div>
+
+        <!-- Section 3: Images Left, Content Right -->
+        <div class="product-section">
+            <div class="image-stack">
+                <img src="images/sca7.jpg" alt="Reach Stacker">
+                <img src="images/sca8.jpg" alt="Heavy Equipment">
+                <img src="images/sca9.jpg" alt="Industrial Machinery">
+            </div>
+            <div class="content-block">
+                <h2>Reach Stackers</h2>
+                <p>Our reach stackers combine power and precision for efficient container handling in ports, terminals, and intermodal yards. These versatile machines can stack containers up to six high with exceptional stability.</p>
+                <p>Equipped with advanced hydraulic systems and operator-friendly cabins, our reach stackers deliver superior performance in the most demanding operational conditions.</p>
+                <a href="cranes.html" class="product-button">Discover Reach Stackers</a>
+            </div>
+        </div>
+
+        <!-- Section 4: Content Left, Images Right -->
+        <div class="product-section">
+            <div class="content-block">
+                <h2>Pushback Tractors</h2>
+                <p>Our pushback tractors are essential for airport ground operations, providing reliable and efficient aircraft pushback services. Designed with precision engineering, they ensure safe and smooth aircraft movement on the tarmac.</p>
+                <p>With powerful engines and advanced towing capabilities, these tractors handle aircraft of all sizes while meeting stringent aviation safety standards.</p>
+                <a href="excavators.html" class="product-button">Learn About Tractors</a>
+            </div>
+            <div class="image-stack">
+                <img src="images/Sca10.jpg" alt="Aircraft Tractor">
+                <img src="images/Sca12.jpg" alt="Airport Equipment">
+                <img src="images/Sca13.jpg" alt="Aviation Ground Support">
+            </div>
+        </div>
+
+        <!-- Section 5: Images Left, Content Right -->
+        <div class="product-section">
+            <div class="image-stack">
+                <img src="images/Sca14.jpg" alt="Custom Solutions">
+                <img src="images/Sca1.jpg" alt="Engineering">
+                <img src="images/Sca4.jpg" alt="Manufacturing">
+            </div>
+            <div class="content-block">
+                <h2>Custom Solutions</h2>
+                <p>Beyond our standard product line, we offer customized material handling solutions tailored to your specific operational needs. Our engineering team works closely with clients to design and manufacture equipment that perfectly fits their requirements.</p>
+                <p>From concept to delivery, we ensure every custom solution meets the highest standards of quality, safety, and performance while optimizing your operational efficiency.</p>
+                <a href="loaders.html" class="product-button">Request Custom Solution</a>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- gallery -->
+    <section class="gallery-section">
+        <h1 class="gallery-title">OUR GALLERY</h1>
+        
+        <div class="gallery-wrapper">
+            <div class="gallery-track">
+                <!-- First set of images -->
+                <div class="gallery-item">
+                    <img src="images/sca2.jpg" alt="Forklift 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca3.jpg" alt="Forklift 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca5.jpg" alt="Forklift 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca7.jpg" alt="Forklift 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca9.jpg" alt="Forklift 5">
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="gallery-item">
+                    <img src="images/sca4.jpg" alt="Forklift 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca12.jpg" alt="Forklift 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca13.jpg" alt="Forklift 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca14.jpg" alt="Forklift 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca6.jpg" alt="Forklift 5">
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Our Clients -->
+    <section class="gallerys-section">
+        <h1 class="gallery-title">OUR Clients</h1>
+        
+        <div class="gallerys-wrapper">
+            <div class="gallerys-track">
+                <!-- First set of images -->
+                <div class="gallerys-item">
+                    <img src="images/sca2.jpg" alt="Forklift 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/sca3.jpg" alt="Forklift 2">
+                </div>
+                <div class="gallerys-item">
+                    <img src="images/sca5.jpg" alt="Forklift 3">
+                </div>
+                <div class="gallerys-item">
+                    <img src="images/sca7.jpg" alt="Forklift 4">
+                </div>
+                <div class="gallerys-item">
+                    <img src="images/sca9.jpg" alt="Forklift 5">
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="gallerys-item">
+                    <img src="images/sca4.jpg" alt="Forklift 1">
+                </div>
+                <div class="gallerys-item">
+                    <img src="images/sca12.jpg" alt="Forklift 2">
+                </div>
+                <div class="gallerys-item">
+                    <img src="images/sca13.jpg" alt="Forklift 3">
+                </div>
+                <div class="gallerys-item">
+                    <img src="images/sca14.jpg" alt="Forklift 4">
+                </div>
+                <div class="gallerys-item">
+                    <img src="images/sca6.jpg" alt="Forklift 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- HISTORY / TIMELINE -->
+  <section id="history" class="container-section">
+    <div class="section-title">
+      <h2>Our History</h2>
+      <small class="section-sub">Milestones & product launches</small>
+    </div>
+
+    <div class="timeline" data-aos="fade-up">
+      <div class="timeline-item">
+        <h5>2012</h5>
+        <p>Company founded and started production of heavy equipment.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h5>2013</h5>
+        <p>Private Limited registration. First 35-ton forklift (LT-35) rolled out in September.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h5>2014</h5>
+        <p>Fork lift truck (LT-20) launched in April.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h5>2015</h5>
+        <p>Launched ECH08/3, LT-10, LT-12. ISO 9001:2015 certification received.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h5>2016</h5>
+        <p>Launched LT-10SP, ECH08/4, LT-15, LCH RS45/5. Second manufacturing unit at Nelamangala.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h5>2017</h5>
+        <p>Launched LT-25 and updated LT-35. Third manufacturing unit at Vasanthanarasipura.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h5>2017–2024</h5>
+        <p>Secured supply orders, launched electric forklifts and reach stackers, expanded global operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="container-section">
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <small class="section-sub">Get in touch for quotes, service and parts</small>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="card-modern p-3">
+          <h5>Head Office</h5>
+          <p class="text-muted mb-1">SCA Heavy Equipment Pvt Ltd — Peenya / Bangalore</p>
+          <p class="text-muted mb-1">Main Office Phone: <strong>+(91)-(80)-2839 4532</strong></p>
+          <p class="text-muted">Managed by <strong>Mr. S. Rajagopal</strong></p>
+        </div>
+
+        <div class="mt-3">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="products.html">Products</a></li>
+            <li><a href="why sca.html">Why SCA</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="Milestones.html">Milestones</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="card-modern p-3">
+          <h5 class="mb-3">Leave a Message</h5>
+          <form id="contactForm" class="row g-2" novalidate>
+            <div class="col-md-6">
+              <input class="form-control bg-transparent text-light" type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="col-md-6">
+              <input class="form-control bg-transparent text-light" type="email" name="email" placeholder="Email address" required>
+            </div>
+            <div class="col-12">
+              <input class="form-control bg-transparent text-light" type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="col-12">
+              <textarea class="form-control bg-transparent text-light" name="message" rows="5" placeholder="Your message..." required></textarea>
+            </div>
+
+            <div class="col-12 d-flex justify-content-end">
+              <button type="submit" class="btn btn-accent">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="max-width:var(--container-width);">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="banner/logo/SCA logo1.png" alt="SCA" style="height:60px;">
+          <p class="mt-3" style="color:var(--muted)">SCA Heavy Equipment Pvt. Ltd is led by Mr. S. Rajagopal. With expertise in Engineering, we deliver excellence through innovation and motivation.</p>
+        </div>
+
+        <div class="col-md-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Experience.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6>Products</h6>
+          <ul class="list-unstyled">
+            <li><a href="products.html">Forklift Range</a></li>
+            <li><a href="Reachstacker CS08.html">Reachstacker CS08-5</a></li>
+            <li><a href="AD Series.html">AD Series Reachstacker</a></li>
+            <li><a href="AE Series High-Voltage Lithium Battery Reachstacker.html">AE Lithium Reachstacker</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6>Why SCA</h6>
+          <ul class="list-unstyled">
+            <li><a href="company.html">Company</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="Milestones.html">Milestones</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border-top:1px solid rgba(255,255,255,0.04); margin:1.6rem 0;">
+
+      <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+        <small style="color:var(--muted)">Copyright © 2025 SCA Heavy Equipments</small>
+        <div class="mt-2 mt-md-0">
+          Powered by <a href="https://slnetworks.in" target="_blank" rel="noopener noreferrer">slnetworks.in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor=>{
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target){
+          window.scrollTo({ top: target.offsetTop - 72, behavior:'smooth' });
+        }
+      });
+    });
+
+    // lightweight contact form handler (demo only)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      // Very simple UI feedback - replace with real AJAX to your backend
+      const btn = this.querySelector('button[type="submit"]');
+      const original = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      setTimeout(()=>{
+        btn.disabled = false;
+        btn.innerHTML = original;
+        alert('Thanks! Your message was sent (demo). Replace client-side handler with actual API.');
+        this.reset();
+      }, 1100);
+    });
+
+  </script>
+</body>
+</html>

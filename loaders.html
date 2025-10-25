@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SCA - Premium Material Handling Solutions</title>
+  <link rel="icon" type="image/png" href="banner/logo/SCA logo1.png">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS for scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <link href="index.html" rel="about">
+
+  
+
+  <style>
+    :root{
+      --brand-dark: #0b0b10;       /* deep background */
+      --brand-dark-2: #111217;
+      --accent: #ff6a00;          /* primary orange */
+      --accent-600: #ff6a00;
+      --muted: #aeb3be;
+      --glass: rgba(255,255,255,0.04);
+      --card-shadow: 0 10px 30px rgba(11,11,16,0.5);
+      --container-width: 1200px;
+    }
+
+    html,body{height:100%;}
+    body{
+      background: linear-gradient(180deg,var(--brand-dark), #0f1114 120%);
+      color: #e6eef8;
+      font-family: Inter, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* NAV */
+    .navbar{
+      background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .navbar-brand img{ height:44px; }
+    .nav-link{ color: #dfe8f8 !important; font-weight:500; }
+    .nav-link:hover{ color: var(--accent) !important; }
+
+     /* ========== 1. HERO BANNER REGION ========== */
+        .hero-banner-region {
+            background: linear-gradient(135deg, #000000 0%, #2d2d2d 100%);
+            color: white;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner-region::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(255,255,255,0.03) 2px,
+                rgba(255,255,255,0.03) 4px
+            );
+        }
+
+        .banner-inner-wrapper {
+            text-align: center;
+            z-index: 2;
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .main-equipment-showcase {
+            width: 350px;
+            height: 350px;
+            background: white;
+            margin: 0 auto 2rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #666;
+            transition: transform 0.3s ease;
+            border: 3px solid rgba(255,255,255,0.1);
+        }
+
+        .main-equipment-showcase:hover {
+            transform: translateY(-10px) scale(1.02);
+        }
+
+        .product-headline-text {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -1px;
+        }
+
+        .tagline-description-text {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: #cccccc;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .action-buttons-group {
+            margin-top: 2rem;
+        }
+
+        .primary-action-button {
+            display: inline-block;
+            padding: 18px 45px;
+            background: white;
+            color: black;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            margin: 0 10px;
+            border: 2px solid white;
+        }
+
+        .primary-action-button:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255,255,255,0.3);
+        }
+
+        .primary-action-button.transparent-style {
+            background: transparent;
+            color: white;
+        }
+
+        .primary-action-button.transparent-style:hover {
+            background: white;
+            color: black;
+        }
+
+        /* ========== 2. PRODUCT DETAILS AREA ========== */
+        .product-details-area {
+            padding: 100px 2rem;
+            background: white;
+            position: relative;
+        }
+
+        .section-heading-center {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .section-heading-center::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: black;
+            margin: 1rem auto 0;
+        }
+
+        .overview-text-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            line-height: 2;
+            color: #333;
+            text-align: center;
+        }
+
+        .info-highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 3rem auto 0;
+        }
+
+        .highlight-info-box {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .highlight-info-box strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: black;
+        }
+
+        /* ========== 3. FEATURES SHOWCASE SECTION ========== */
+        .features-showcase-section {
+            padding: 100px 2rem;
+            background: #000000;
+        }
+
+        .features-showcase-section .section-heading-center {
+            color: white;
+        }
+
+        .features-showcase-section .section-heading-center::after {
+            background: white;
+        }
+
+        .features-grid-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card-item {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .feature-card-item:hover {
+            transform: translateY(-10px);
+            border-color: white;
+            box-shadow: 0 15px 40px rgba(255,255,255,0.2);
+        }
+
+        .feature-icon-circle {
+            width: 80px;
+            height: 80px;
+            background: black;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .feature-title-heading {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #c41e3a;
+        }
+
+        .feature-description-text {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* ========== 4. TECHNICAL SPECS DIVISION ========== */
+        .technical-specs-division {
+            padding: 100px 2rem;
+            background: white;
+        }
+
+        .specs-wrapper-box {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            border-radius: 20px;
+            padding: 50px;
+            border: 3px solid black;
+        }
+
+        .specs-grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .spec-detail-block {
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            border-left: 4px solid black;
+        }
+
+        .spec-label-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .spec-value-info {
+            font-size: 1.2rem;
+            color: black;
+            font-weight: 500;
+        }
+
+        /* ========== 5. IMAGES GALLERY SECTION ========== */
+        .images-gallery-section {
+            padding: 100px 2rem;
+            background: #f8f8f8;
+        }
+
+        .gallery-images-layout {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-image-box {
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            color: #999;
+            font-size: 1rem;
+        }
+
+        .gallery-image-box:hover {
+            transform: scale(1.05);
+            border-color: black;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        /* ========== 6. BENEFITS DISPLAY ZONE ========== */
+        .benefits-display-zone {
+            padding: 100px 2rem;
+            background: black;
+            color: white;
+        }
+
+        .benefits-display-zone .section-heading-center {
+            color: white;
+        }
+
+        .benefits-display-zone .section-heading-center::after {
+            background: white;
+        }
+
+        .benefits-grid-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .benefit-card-block {
+            text-align: center;
+        }
+
+        .benefit-number-badge {
+            width: 60px;
+            height: 60px;
+            background: white;
+            color: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .benefit-heading-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .benefit-text-description {
+            color: #cccccc;
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        /* ========== 7. CONTACT FORM REGION ========== */
+        .contact-form-region {
+            padding: 100px 2rem;
+            background: white;
+        }
+
+        .form-container-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            padding: 60px 50px;
+            border-radius: 20px;
+            border: 3px solid black;
+        }
+
+        .contact-form-region .section-heading-center {
+            margin-bottom: 2rem;
+        }
+
+        .submission-form-element {
+            margin-top: 2rem;
+        }
+
+        .input-field-wrapper {
+            margin-bottom: 25px;
+        }
+
+        .input-field-wrapper label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .input-field-wrapper input,
+        .input-field-wrapper textarea,
+        .input-field-wrapper select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .input-field-wrapper input:focus,
+        .input-field-wrapper textarea:focus,
+        .input-field-wrapper select:focus {
+            outline: none;
+            border-color: black;
+        }
+
+        .input-field-wrapper textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-action-button {
+            width: 100%;
+            padding: 18px;
+            background: black;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-action-button:hover {
+            background: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .product-headline-text {
+                font-size: 2.5rem;
+            }
+
+            .section-heading-center {
+                font-size: 2rem;
+            }
+
+            .main-equipment-showcase {
+                width: 280px;
+                height: 280px;
+            }
+
+            .specs-wrapper-box,
+            .form-container-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container" style="max-width:var(--container-width);">
+      <a class="navbar-brand" href="#">
+        <img src="banner/logo/SCA logo1.png" alt="SCA Logo">
+      </a>
+      <button class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
+        <span class="navbar-toggler-icon" style="display:inline-block; width:22px; height:14px; background: linear-gradient(180deg,#fff,#ddd);"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="siteNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link px-3" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="About.html">About</a></li>
+          <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown">Products</a>
+                        <ul class="dropdown-menu" style="background: var(--light-bg); border: 1px solid rgba(255,107,53,0.2);">
+                            <li><a class="dropdown-item" href="forklift.html" style="color: var(--text-light);">Fork Lift Trucks</a></li>
+                            <li><a class="dropdown-item" href="reach-stacker.html" style="color: var(--text-light);">Reach Stackers</a></li>
+                            <li><a class="dropdown-item" href="cranes.html" style="color: var(--text-light);">Industrial Cranes</a></li>
+                            <li><a class="dropdown-item" href="excavators.html" style="color: var(--text-light);">Excavators</a></li>
+                            <li><a class="dropdown-item" href="loaders.html" style="color: var(--text-light);">Wheel Loaders</a></li>
+                        </ul>
+          <li class="nav-item"><a class="nav-link px-3" href="Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link px-3" href="Contact.html">Contact</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+    <!-- ========== 1. HERO BANNER REGION ========== -->
+    <section class="hero-banner-region">
+        <div class="banner-inner-wrapper">
+            <div class="main-equipment-showcase">
+                <img src="images/sca13.jpg" alt="Product" height="440" width="440">
+            </div>
+            <h1 class="product-headline-text">Hydraulic Excavator HD-360</h1>
+            <p class="tagline-description-text">Unmatched Digging Power & Precision for Heavy Construction</p>
+            <div class="action-buttons-group">
+                <a href="#contact" class="primary-action-button">Get Quote</a>
+                <a href="#contact" class="primary-action-button transparent-style">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 2. PRODUCT DETAILS AREA ========== -->
+    <section class="product-details-area">
+        <h2 class="section-heading-center">Product Overview</h2>
+        <div class="overview-text-content">
+            <p>The Hydraulic Excavator HD-360 is a premium construction machine engineered for demanding excavation projects across construction sites, mining operations, and infrastructure development. Designed for contractors and construction companies who require maximum productivity and reliability, this excavator delivers exceptional digging force and smooth operation. It addresses the challenges of deep excavation, material loading, and site preparation with unmatched efficiency. Built with advanced hydraulic technology and operator-focused ergonomics, it's the ultimate choice for serious earthmoving operations.</p>
+        </div>
+        <div class="info-highlights-grid">
+            <div class="highlight-info-box">
+                <strong>What It Is</strong>
+                <p>Heavy-duty excavator</p>
+            </div>
+            <div class="highlight-info-box">
+                <strong>Who It's For</strong>
+                <p>Construction & mining firms</p>
+            </div>
+            <div class="highlight-info-box">
+                <strong>Problem It Solves</strong>
+                <p>Large-scale excavation needs</p>
+            </div>
+            <div class="highlight-info-box">
+                <strong>Key Benefit</strong>
+                <p>Power, precision & reliability</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 3. FEATURES SHOWCASE SECTION ========== -->
+    <section class="features-showcase-section">
+        <h2 class="section-heading-center">Key Features</h2>
+        <div class="features-grid-container">
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">💪</div>
+                <h3 class="feature-title-heading">Massive Digging Force</h3>
+                <p class="feature-description-text">36-ton operating weight with exceptional breakout force for the toughest soil and rock conditions.</p>
+            </div>
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">🔧</div>
+                <h3 class="feature-title-heading">Advanced Hydraulics</h3>
+                <p class="feature-description-text">State-of-the-art hydraulic system delivers smooth, precise control with maximum efficiency.</p>
+            </div>
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">🎮</div>
+                <h3 class="feature-title-heading">Intelligent Controls</h3>
+                <p class="feature-description-text">Electronic control system with multiple work modes for different applications and conditions.</p>
+            </div>
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">🪟</div>
+                <h3 class="feature-title-heading">Panoramic Cabin</h3>
+                <p class="feature-description-text">Spacious, climate-controlled operator station with 360-degree visibility and minimal blind spots.</p>
+            </div>
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">⛽</div>
+                <h3 class="feature-title-heading">Fuel Economy Mode</h3>
+                <p class="feature-description-text">Intelligent engine management reduces fuel consumption by up to 20% without sacrificing performance.</p>
+            </div>
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">🔐</div>
+                <h3 class="feature-title-heading">Enhanced Safety</h3>
+                <p class="feature-description-text">Multiple safety features including ROPS/FOPS certified cabin and emergency shutdown systems.</p>
+            </div>
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">📡</div>
+                <h3 class="feature-title-heading">Telematics System</h3>
+                <p class="feature-description-text">Real-time machine monitoring, GPS tracking, and performance analytics via mobile app.</p>
+            </div>
+            <div class="feature-card-item">
+                <div class="feature-icon-circle">🔨</div>
+                <h3 class="feature-title-heading">Attachment Ready</h3>
+                <p class="feature-description-text">Quick-coupler system compatible with breakers, grapples, and specialized attachments.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 4. TECHNICAL SPECS DIVISION ========== -->
+    <section class="technical-specs-division">
+        <h2 class="section-heading-center">Technical Specifications</h2>
+        <div class="specs-wrapper-box">
+            <div class="specs-grid-layout">
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Model Number</div>
+                    <div class="spec-value-info">HD-360-ULTRA</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Operating Weight</div>
+                    <div class="spec-value-info">36,000 kg</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Engine Power</div>
+                    <div class="spec-value-info">260 HP Turbocharged</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Bucket Capacity</div>
+                    <div class="spec-value-info">1.8 cubic meters</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Max Digging Depth</div>
+                    <div class="spec-value-info">7.5 meters</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Max Reach</div>
+                    <div class="spec-value-info">11.2 meters</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Swing Speed</div>
+                    <div class="spec-value-info">10.5 RPM</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Travel Speed</div>
+                    <div class="spec-value-info">5.5 km/h</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Fuel Tank</div>
+                    <div class="spec-value-info">620 Liters</div>
+                </div>
+                <div class="spec-detail-block">
+                    <div class="spec-label-title">Warranty</div>
+                    <div class="spec-value-info">3 Years / 6000 Hours</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 5. IMAGES GALLERY SECTION ========== -->
+    <section class="images-gallery-section">
+        <h2 class="section-heading-center">Product Gallery</h2>
+        <div class="gallery-images-layout">
+            <div class="gallery-image-box">Full Machine View</div>
+            <div class="gallery-image-box">Operator Cabin</div>
+            <div class="gallery-image-box">Boom & Arm Detail</div>
+            <div class="gallery-image-box">Undercarriage</div>
+            <div class="gallery-image-box">At Work Site</div>
+            <div class="gallery-image-box">Control Console</div>
+        </div>
+    </section>
+
+    <!-- ========== 6. BENEFITS DISPLAY ZONE ========== -->
+    <section class="benefits-display-zone">
+        <h2 class="section-heading-center">Why Choose This Product</h2>
+        <div class="benefits-grid-wrapper">
+            <div class="benefit-card-block">
+                <div class="benefit-number-badge">1</div>
+                <h3 class="benefit-heading-title">Uncompromising Reliability</h3>
+                <p class="benefit-text-description">Built to withstand the harshest conditions with components tested beyond industry standards. Proven track record in extreme environments worldwide.</p>
+            </div>
+            <div class="benefit-card-block">
+                <div class="benefit-number-badge">2</div>
+                <h3 class="benefit-heading-title">Maximum Uptime</h3>
+                <p class="benefit-text-description">Superior engineering means fewer breakdowns and longer service intervals. Lower total cost of ownership with better productivity.</p>
+            </div>
+            <div class="benefit-card-block">
+                <div class="benefit-number-badge">3</div>
+                <h3 class="benefit-heading-title">Full Service Support</h3>
+                <p class="benefit-text-description">Nationwide parts availability and certified service technicians. Comprehensive operator training and ongoing technical assistance included.</p>
+            </div>
+            <div class="benefit-card-block">
+                <div class="benefit-number-badge">4</div>
+                <h3 class="benefit-heading-title">Flexible Solutions</h3>
+                <p class="benefit-text-description">Fast delivery with professional commissioning. Customizable financing packages and comprehensive warranty coverage available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 7. CONTACT FORM REGION ========== -->
+    <section class="contact-form-region" id="contact">
+        <div class="form-container-box">
+            <h2 class="section-heading-center">Request a Quote</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Complete the form and our heavy equipment specialists will provide detailed pricing and specifications within 24 hours.</p>
+            <form class="submission-form-element">
+                <div class="input-field-wrapper">
+                    <label for="username">Full Name *</label>
+                    <input type="text" id="username" name="username" required placeholder="Enter your full name">
+                </div>
+                <div class="input-field-wrapper">
+                    <label for="useremail">Email Address *</label>
+                    <input type="email" id="useremail" name="useremail" required placeholder="your.email@example.com">
+                </div>
+                <div class="input-field-wrapper">
+                    <label for="userphone">Phone Number *</label>
+                    <input type="tel" id="userphone" name="userphone" required placeholder="+91 XXXXX XXXXX">
+                </div>
+                <div class="input-field-wrapper">
+                    <label for="quantity">Quantity Needed</label>
+                    <select id="quantity" name="quantity">
+                        <option>1 Unit</option>
+                        <option>2 Units</option>
+                        <option>3-5 Units</option>
+                        <option>5+ Units</option>
+                    </select>
+                </div>
+                <div class="input-field-wrapper">
+                    <label for="notes">Project Details</label>
+                    <textarea id="notes" name="notes" placeholder="Tell us about your project requirements and application..."></textarea>
+                </div>
+                <button type="submit" class="submit-action-button">Request Quote Now</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+</html>
