@@ -37,11 +37,16 @@
     }
 
     /* NAV */
-    .navbar{
-      background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
-      backdrop-filter: blur(6px);
-      border-bottom: 1px solid rgba(255,255,255,0.03);
-    }
+.navbar{
+  background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
     .navbar-brand img{ height:44px; }
     .nav-link{ color: #dfe8f8 !important; font-weight:500; }
     .nav-link:hover{ color: var(--accent) !important; }
@@ -612,7 +617,7 @@
 /* Our Clients */
     .gallerys-section {
             padding: 60px 0;
-            background: #101010;
+            background: #a2a0a0;
         }
 
         .gallerys-title {
@@ -683,42 +688,7 @@
             }
         }
 
-    /* timeline */
-    .timeline{
-      position:relative;
-      padding-left: 1rem;
-      margin-top: 1rem;
-    }
-    .timeline::before{
-      content:"";
-      position:absolute;
-      left:20px;
-      top:0;
-      bottom:0;
-      width:4px;
-      background: linear-gradient(180deg, var(--accent), #ff9b4a);
-      border-radius:4px;
-    }
-    .timeline-item{
-      position:relative;
-      padding:1rem 1rem 1rem 3.5rem;
-      margin-bottom:1.1rem;
-      background: rgba(255,255,255,0.02);
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,0.02);
-    }
-    .timeline-item::before{
-      content:"";
-      position:absolute;
-      left:6px;
-      top:18px;
-      width:14px; height:14px;
-      border-radius:50%;
-      background: #fff;
-      box-shadow: 0 0 0 6px rgba(255,106,0,0.12);
-    }
-    .timeline-item h5{ margin-bottom:4px; color:#fff; font-weight:700; }
-    .timeline-item p{ color:var(--muted); margin:0; font-size:0.95rem; }
+    
 
     /* footer */
     footer{
@@ -729,9 +699,6 @@
     }
     .footer a{ color: #dfeeff; text-decoration:none; }
     .footer a:hover{ color: var(--accent); }
-
-    /* contact form */
-    .form-control:focus{ box-shadow:none; border-color: rgba(255,106,0,0.85); }
 
     /* responsive tweaks */
     @media (max-width: 768px){
@@ -749,7 +716,7 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container" style="max-width:var(--container-width);">
       <a class="navbar-brand" href="index.html">
-        <img src="banner/logo/SCA logo1.png" alt="SCA Logo">
+        <img src="images/SCA logo1.png" alt="SCA Logo">
       </a>
       <button class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
         <span class="navbar-toggler-icon" style="display:inline-block; width:22px; height:14px; background: linear-gradient(180deg,#fff,#ddd);"></span>
@@ -795,9 +762,9 @@
                 <p class="lead">Innovative forklifts, reachstackers and electric heavy equipment to maximize uptime and sustainability.</p>
                 
                 <div class="mt-3 d-flex flex-wrap align-items-center gap-2">
-                    <a class="btn btn-accent me-2" href="products.html">Explore Products-></a>
+                    <a class="btn btn-accent me-2" href="product.html">Explore Products-></a>
                     <a class="btn btns-accent me-2" href="Services.html">EXplore Services -></a>
-                    <a class="btn btn-outline-light-custom" href="#contact">Contact Us</a>
+                    <a class="btn btn-outline-light-custom" href="Contact.html">Contact Us</a>
                 </div>
                 
                 <div class="stats mt-4">
@@ -861,12 +828,13 @@
                 <p>Since 2012, SCA Heavy Equipment has been at the forefront of manufacturing innovation, delivering world-class material handling solutions to industries across the globe.</p>
                 <p>We specialize in creating durable, reliable equipment that transforms how businesses handle their operations. Our commitment to quality and customer satisfaction drives everything we do.</p>
                 <p>From our state-of-the-art facility in Peenya, Bangalore, we serve customers worldwide with precision-engineered solutions tailored to their unique needs.</p>
-                <a href="#" class="cta-button">Learn More About Us</a>
+                <a href="About.html" class="cta-button">Learn More About Us</a>
             </div>
             <div class="image-content">
-              <video width="550" height="500" controls>
-                    <source src="images/About video.mp4" type="video/mp4">
-                </video>
+              <video width="550" height="500" autoplay muted loop playsinline>
+    <source src="images/About video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
             </div>
         </div>
 
@@ -1059,104 +1027,7 @@
         </div>
     </section>
 
-
-  <!-- HISTORY / TIMELINE -->
-  <section id="history" class="container-section">
-    <div class="section-title">
-      <h2>Our History</h2>
-      <small class="section-sub">Milestones & product launches</small>
-    </div>
-
-    <div class="timeline" data-aos="fade-up">
-      <div class="timeline-item">
-        <h5>2012</h5>
-        <p>Company founded and started production of heavy equipment.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h5>2013</h5>
-        <p>Private Limited registration. First 35-ton forklift (LT-35) rolled out in September.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h5>2014</h5>
-        <p>Fork lift truck (LT-20) launched in April.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h5>2015</h5>
-        <p>Launched ECH08/3, LT-10, LT-12. ISO 9001:2015 certification received.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h5>2016</h5>
-        <p>Launched LT-10SP, ECH08/4, LT-15, LCH RS45/5. Second manufacturing unit at Nelamangala.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h5>2017</h5>
-        <p>Launched LT-25 and updated LT-35. Third manufacturing unit at Vasanthanarasipura.</p>
-      </div>
-
-      <div class="timeline-item">
-        <h5>2017–2024</h5>
-        <p>Secured supply orders, launched electric forklifts and reach stackers, expanded global operations.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="container-section">
-    <div class="section-title">
-      <h2>Contact Us</h2>
-      <small class="section-sub">Get in touch for quotes, service and parts</small>
-    </div>
-
-    <div class="row g-4">
-      <div class="col-lg-6" data-aos="fade-right">
-        <div class="card-modern p-3">
-          <h5>Head Office</h5>
-          <p class="text-muted mb-1">SCA Heavy Equipment Pvt Ltd — Peenya / Bangalore</p>
-          <p class="text-muted mb-1">Main Office Phone: <strong>+(91)-(80)-2839 4532</strong></p>
-          <p class="text-muted">Managed by <strong>Mr. S. Rajagopal</strong></p>
-        </div>
-
-        <div class="mt-3">
-          <h6>Quick Links</h6>
-          <ul class="list-unstyled">
-            <li><a href="products.html">Products</a></li>
-            <li><a href="why sca.html">Why SCA</a></li>
-            <li><a href="culture.html">Culture</a></li>
-            <li><a href="Milestones.html">Milestones</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="col-lg-6" data-aos="fade-left">
-        <div class="card-modern p-3">
-          <h5 class="mb-3">Leave a Message</h5>
-          <form id="contactForm" class="row g-2" novalidate>
-            <div class="col-md-6">
-              <input class="form-control bg-transparent text-light" type="text" name="name" placeholder="Your name" required>
-            </div>
-            <div class="col-md-6">
-              <input class="form-control bg-transparent text-light" type="email" name="email" placeholder="Email address" required>
-            </div>
-            <div class="col-12">
-              <input class="form-control bg-transparent text-light" type="text" name="subject" placeholder="Subject" required>
-            </div>
-            <div class="col-12">
-              <textarea class="form-control bg-transparent text-light" name="message" rows="5" placeholder="Your message..." required></textarea>
-            </div>
-
-            <div class="col-12 d-flex justify-content-end">
-              <button type="submit" class="btn btn-accent">Send Message</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
   <!-- FOOTER -->
   <footer class="footer">

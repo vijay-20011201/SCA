@@ -45,6 +45,11 @@
       background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
       backdrop-filter: blur(6px);
       border-bottom: 1px solid rgba(255,255,255,0.03);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
     }
     .navbar-brand img{ height:44px; }
     .nav-link{ color: #dfe8f8 !important; font-weight:500; }
@@ -466,7 +471,7 @@
   <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container" style="max-width:var(--container-width);">
       <a class="navbar-brand" href="index.html">
-        <img src="banner/logo/SCA logo1.png" alt="SCA Logo">
+        <img src="images/SCA logo1.png" alt="SCA Logo">
       </a>
       <button class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#siteNav">
         <span class="navbar-toggler-icon" style="display:inline-block; width:22px; height:14px; background: linear-gradient(180deg,#fff,#ddd);"></span>
@@ -539,8 +544,8 @@
     <!-- ==================== WHY SCA SECTION ==================== -->
     <section class="why-sca">
         <div class="why-container">
-            <h2>Why SCA?</h2>
-            <p>At SCA, we don't just provide services – we build partnerships. Our unique approach combines technical expertise with deep industry knowledge to deliver solutions that truly matter. We understand that every business is different, which is why we take the time to understand your specific challenges and goals.</p>
+            <h2>Why <span style="color:var(--accent)">SCA?</span></h2>
+            <p>At <span style="color:var(--accent)">SCA</span>, we don't just provide services – we build partnerships. Our unique approach combines technical expertise with deep industry knowledge to deliver solutions that truly matter. We understand that every business is different, which is why we take the time to understand your specific challenges and goals.</p>
             <p>With a proven track record of success, cutting-edge technology stack, and a team of passionate professionals, we're committed to helping you stay ahead in today's competitive landscape. Choose SCA for reliability, innovation, and results that exceed expectations.</p>
         </div>
     </section>
