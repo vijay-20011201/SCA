@@ -45,6 +45,11 @@
       background: linear-gradient(180deg, rgba(6,6,8,0.85), rgba(6,6,8,0.6));
       backdrop-filter: blur(6px);
       border-bottom: 1px solid rgba(255,255,255,0.03);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1030;
     }
     .navbar-brand img{ height:44px; }
     .nav-link{ color: #dfe8f8 !important; font-weight:500; }
@@ -115,165 +120,31 @@
       }
     }
 
-    /* ============================================
-           HERO SECTION
-        ============================================ */
-        .hero-section {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 100px 20px;
+    /* ========== CALL TO ACTION SECTION ========== */
+        .cta-section {
+            padding: 100px 2rem;
+            background: white;
+            color: #000000;
         }
 
-        .hero-section h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .hero-section p {
-            font-size: 1.3rem;
-            color: #ccc;
-        }
-
-        /* ============================================
-           OUR TEAM SECTION
-        ============================================ */
-        .team-section {
-            background: #fff;
-            padding: 80px 20px;
+        .cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            padding: 60px 50px;
+            border-radius: 20px;
+            border: 3px solid black;
         }
 
         .section-title {
-            text-align: center;
+            margin-bottom: 2rem;
+            color: #a83636;
             font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #000;
+            text-align: center;
         }
 
-        .team-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .team-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .team-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
-
-        .team-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #000;
-        }
-
-        .team-card .designation {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .team-card .contact-info {
-            margin-top: 20px;
-        }
-
-        .team-card .contact-info p {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .team-card .contact-info i {
-            margin-right: 10px;
-            color: #000;
-            width: 20px;
-        }
-
-        /* ============================================
-           OUR LOCATIONS SECTION
-        ============================================ */
-        .locations-section {
-            background: #000;
-            color: #fff;
-            padding: 80px 20px;
-        }
-
-        .locations-section .section-title {
-            color: #fff;
-        }
-
-        .locations-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .location-card {
-            background: #1a1a1a;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 20px rgba(255,255,255,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .location-card:hover {
-            transform: translateY(-10px);
-            background: #222;
-        }
-
-        .location-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-
-        .location-card p {
-            color: #ccc;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .location-card i {
-            margin-right: 10px;
-            margin-top: 5px;
-            color: #fff;
-        }
-
-        /* ============================================
-           SEND MESSAGE FORM SECTION
-        ============================================ */
-        .form-section {
-            background: #fff;
-            padding: 80px 20px;
-        }
-
-        .form-section .section-title {
-            color: #000;
-        }
-
-        .form-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #f9f9f9;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        .contact-form {
+            margin-top: 2rem;
         }
 
         .form-group {
@@ -284,93 +155,105 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #333;
+            font-size: 1rem;
         }
 
         .form-group input,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+            padding: 15px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
             font-size: 1rem;
             font-family: inherit;
             transition: border-color 0.3s ease;
         }
 
         .form-group input:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
-            border-color: #000;
+            border-color: black;
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 120px;
         }
 
-        .submit-btn {
-            background: #000;
-            color: #fff;
-            padding: 15px 40px;
+        .submit-button {
+            width: 100%;
+            padding: 18px;
+            background: black;
+            color: white;
             border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s ease;
-            width: 100%;
+            transition: all 0.3s ease;
         }
 
-        .submit-btn:hover {
+        .submit-button:hover {
             background: #333;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
-        /* ============================================
-           MAP SECTION
-        ============================================ */
-        .map-section {
-            background: #000;
-            padding: 80px 20px;
+        .submit-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
         }
 
-        .map-section .section-title {
-            color: #fff;
-        }
-
-        .map-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Success/Error Messages */
+        .message {
+            padding: 15px;
             border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(255,255,255,0.1);
+            margin-bottom: 20px;
+            display: none;
+            text-align: center;
+            font-weight: 600;
+            animation: slideIn 0.3s ease;
         }
 
-        .map-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 2px solid #c3e6cb;
+            display: block;
+        }
+
+        .message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 2px solid #f5c6cb;
+            display: block;
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-section p {
-                font-size: 1.1rem;
-            }
-
             .section-title {
                 font-size: 2rem;
             }
 
-            .form-container {
+            .cta-container {
                 padding: 30px 20px;
             }
         }
-
-        /* WhatsApp Fixed Button */
+    /* WhatsApp Fixed Button */
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -483,146 +366,147 @@
       </div>
     </div>
   </nav>
-
-    <!-- ============================================
-         HERO SECTION
-    ============================================ -->
-    <section class="hero-section">
-        <h1>Contact Us</h1>
-    </section>
-
-    <!-- ============================================
-         OUR TEAM SECTION
-    ============================================ -->
-    <section class="team-section">
-        <h2 class="section-title">Our Team</h2>
-        <div class="team-container">
-            <!-- Team Member 1 -->
-            <div class="team-card">
-                <h3>Jayasimman R</h3>
-                <p class="designation">Director</p>
-                <div class="contact-info">
-                    <p>☎️ (80)-2839 4532</p>
-                    <p>📱 +(91)-78299 77902</p>
-                    <p><i class="fas fa-envelope"></i> jay@scahe.co.in</p>
-                </div>
-            </div>
-
-            <!-- Team Member 2 -->
-            <div class="team-card">
-                <h3>JS Rajagopal</h3>
-                <p class="designation">Managing Director</p>
-                <div class="contact-info">
-                    <p>☎️ (80)-2839 4532</p>
-                    <p>📱 +(91)-93425 11723</p>
-                    <p><i class="fas fa-envelope"></i> srg@scahe.co.in</p>
-                </div>
-            </div>
-
-            <!-- Team Member 3 -->
-            <div class="team-card">
-                <h3>K N Siddalinga Prasad</h3>
-                <p class="designation">General Manager</p>
-                <div class="contact-info">
-                    <p>☎️ (80)-2839 4532</p>
-                    <p>📱 +(91)-93410 94310</p>
-                    <p><i class="fas fa-envelope"></i> service@scahe.co.in</p>
-                </div>
-            </div>
-
-            <!-- Team Member 4 -->
-            <div class="team-card">
-                <h3>S. Jayachandran</h3>
-                <p class="designation">Mentor & Advisor</p>
-                <div class="contact-info">
-                    <p>☎️ (80)-2839 4532</p>
-                    <p>📱+(91)-98451 33417</p>
-                    <p><i class="fas fa-envelope"></i>  jc@scahe.co.in</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         OUR LOCATIONS SECTION
-    ============================================ -->
-    <section class="locations-section">
-        <h2 class="section-title">Our Locations</h2>
-        <div class="locations-container">
-            <!-- Location 1 -->
-            <div class="location-card">
-                <h3> Head Office & Manufacturing Unit I</h3>
-                <p>📍 No. 10-A, 2nd Phase, Peenya Industrial Area, Bengaluru - 560058</p>
-                
-            </div>
-
-            <!-- Location 2 -->
-            <div class="location-card">
-                <h3>Manufacturing Unit II</h3>
-                <p>📍 Sy No. 42/5, Katha No. 173, Kaneshumari No. 117/53, Arasinakunte Village, Kasaba Hobli, Nelamangala Taluk, Bangalore Rural Dist. - 562123</p>
-                
-            </div>
-
-            <!-- Location 3 -->
-            <div class="location-card">
-                <h3>Manufacturing Unit III</h3>
-                <p>📍 Plot # 309, KIADB Industrial Area, Vasanth Narasapura, Tumkur - 572 728</p>
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         SEND MESSAGE FORM SECTION
-    ============================================ -->
-    <section class="form-section">
-        <h2 class="section-title">Send a Message</h2>
-        <div class="form-container">
-            <form id="contactForm">
+<!-- Request Form -->
+    <section class="cta-section" id="contact">
+        <div class="cta-container">
+            <h2 class="section-title">Request a Quote</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Fill out the form below and our team will get back to you within 24 hours with a customized quote.</p>
+            
+            <div id="formMessage" class="message"></div>
+            
+            <form class="contact-form" id="contactForm">
                 <div class="form-group">
-                    <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
                 </div>
-
-                <div class="form-group">
-                    <label for="mobile">Mobile Number *</label>
-                    <input type="tel" id="mobile" name="mobile" required>
-                </div>
-
                 <div class="form-group">
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
                 </div>
-
                 <div class="form-group">
-                    <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <label for="phone">Phone Number *</label>
+                    <div style="display: flex; gap: 10px;">
+                        <input type="text" value="+91" readonly style="width: 60px; background: #e9e9e9; cursor: not-allowed;">
+                        <input type="tel" id="phone" name="phone" required placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" style="flex: 1;">
+                    </div>
+                    <small style="color: #666; font-size: 0.85rem; margin-top: 5px; display: block;">Enter 10-digit mobile number</small>
                 </div>
-
                 <div class="form-group">
-                    <label for="description">Description *</label>
-                    <textarea id="description" name="description" required></textarea>
+                    <label for="quantity">Quantity Needed</label>
+                    <select id="quantity" name="quantity">
+                        <option>1 Unit</option>
+                        <option>2-5 Units</option>
+                        <option>6-10 Units</option>
+                        <option>10+ Units</option>
+                    </select>
                 </div>
-
-                <button type="submit" class="submit-btn">Submit</button>
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="submit-button" id="submitBtn">Request Quote Now</button>
             </form>
         </div>
     </section>
 
-    <!-- ============================================
-         MAP LOCATION SECTION
-    ============================================ -->
-    <section class="map-section">
-        <h2 class="section-title">Our Location</h2>
-        <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8094887867967!2d77.5087429!3d13.0364232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cdeb3a3216f%3A0x335e46841b1f4676!2s10A%2C%202nd%20Phase%2C%20Vidya%20Nagar%2C%20Peenya%2C%20Bengaluru%2C%20Karnataka%20560057%2C%20India!5e0!3m2!1sen!2sus!4v1698765432100!5m2!1sen!2sus" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script>
+        // ========== EMAILJS CONFIGURATION ==========
+        const EMAILJS_PUBLIC_KEY = 'h4c3-o-bAr-lmkIO4';
+        const EMAILJS_SERVICE_ID = 'service_ymarszr';
+        const EMAILJS_TEMPLATE_ID = 'template_nazs8v9';
+
+        // Initialize EmailJS
+        (function() {
+            emailjs.init(EMAILJS_PUBLIC_KEY);
+            console.log('EmailJS initialized successfully');
+        })();
+
+        // ========== FORM SUBMISSION HANDLER ==========
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const messageDiv = document.getElementById('formMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            console.log('Form submitted - Starting process...');
+            
+            // Get form values
+            const phoneNumber = document.getElementById('phone').value;
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: '+91' + phoneNumber,
+                quantity: document.getElementById('quantity').value,
+                message: document.getElementById('message').value || 'No additional message'
+            };
+            
+            // Log form data to console
+            console.log('Form Data:', formData);
+            
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            messageDiv.style.display = 'none';
+            
+            // Prepare template parameters for EmailJS
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                phone: formData.phone,
+                quantity: formData.quantity,
+                message: formData.message,
+                to_email: 'vikivijay882548@gmail.com'
+            };
+            
+            console.log('Sending to EmailJS with params:', templateParams);
+            
+            // Send email using EmailJS
+            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    messageDiv.className = 'message success';
+                    messageDiv.textContent = '✓ Thank you! Your quote request has been sent successfully. We\'ll contact you within 24 hours.';
+                    messageDiv.style.display = 'block';
+                    
+                    // Reset form
+                    form.reset();
+                    
+                    // Scroll to message
+                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    
+                }, function(error) {
+                    console.error('FAILED...', error);
+                    
+                    // Show error message
+                    messageDiv.className = 'message error';
+                    messageDiv.textContent = '✗ Sorry, there was an error sending your request. Please try again or contact us directly at vikivijay882548@gmail.com';
+                    messageDiv.style.display = 'block';
+                    
+                    // Scroll to message
+                    messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                })
+                .finally(function() {
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Request Quote Now';
+                });
+        });
+
+        // Add input event listeners to log values as user types
+        ['name', 'email', 'phone', 'message'].forEach(fieldId => {
+            const field = document.getElementById(fieldId);
+            field.addEventListener('input', function() {
+                console.log(`${fieldId}:`, this.value);
+            });
+        });
+    </script>
+
 
     <!-- Fixed WhatsApp Button -->
     <a href="https://wa.me/918825480950?text=Hi!%20I'm%20interested%20in%20your%20services" 
@@ -634,7 +518,69 @@
         </svg>
     </a> 
 
-    <!-- FOOTER -->
+    <!-- Bootstrap JS + AOS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+
+    // Enhanced dropdown functionality - works on both hover and click
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      
+      dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        const menu = dropdown.querySelector('.dropdown-menu');
+        
+        // Click functionality
+        toggle.addEventListener('click', function(e) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close other dropdowns
+          dropdowns.forEach(other => {
+            if (other !== dropdown) {
+              other.classList.remove('show');
+              other.querySelector('.dropdown-menu').classList.remove('show');
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle('show');
+          menu.classList.toggle('show');
+        });
+        
+        // Hover functionality for desktop
+        if (window.innerWidth >= 992) {
+          dropdown.addEventListener('mouseenter', function() {
+            dropdown.classList.add('show');
+            menu.classList.add('show');
+          });
+          
+          dropdown.addEventListener('mouseleave', function() {
+            dropdown.classList.remove('show');
+            menu.classList.remove('show');
+          });
+        }
+      });
+      
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.dropdown')) {
+          dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('show');
+            dropdown.querySelector('.dropdown-menu').classList.remove('show');
+          });
+        }
+      });
+    });
+  </script>
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container" style="max-width:var(--container-width);">
       <div class="row g-4">
@@ -684,33 +630,5 @@
       </div>
     </div>
   </footer>
-
-    <script>
-        // Form submission handler
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                mobile: document.getElementById('mobile').value,
-                email: document.getElementById('email').value,
-                subject: document.getElementById('subject').value,
-                description: document.getElementById('description').value
-            };
-            
-            // Here you would typically send the data to a server
-            console.log('Form submitted:', formData);
-            
-            // Show success message
-            alert('Thank you for your message! We will get back to you soon.');
-            
-            // Reset form
-            this.reset();
-        });
-    </script>
-
-    
-
 </body>
 </html>

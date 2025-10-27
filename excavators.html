@@ -412,105 +412,7 @@
             line-height: 1.8;
         }
 
-        /* ========== 7. ENGAGEMENT GATEWAY SECTION ========== */
-        .engagement-gateway-section {
-            padding: 100px 2rem;
-            background: white;
-            color: #000000;
-        }
-
-        .gateway-submission-wrapper {
-            max-width: 700px;
-            margin: 0 auto;
-            background: #f8f8f8;
-            padding: 60px 50px;
-            border-radius: 20px;
-            border: 3px solid black;
-        }
-
-        .engagement-gateway-section .centered-title-element {
-            margin-bottom: 2rem;
-            color: #a83636;
-        }
-
-        .interactive-submission-form {
-            margin-top: 2rem;
-        }
-
-        .data-collection-unit {
-            margin-bottom: 25px;
-        }
-
-        .data-collection-unit label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .data-collection-unit input,
-        .data-collection-unit textarea,
-        .data-collection-unit select {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: border-color 0.3s ease;
-        }
-
-        .data-collection-unit input:focus,
-        .data-collection-unit textarea:focus,
-        .data-collection-unit select:focus {
-            outline: none;
-            border-color: black;
-        }
-
-        .data-collection-unit textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .final-action-trigger {
-            width: 100%;
-            padding: 18px;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .final-action-trigger:hover {
-            background: #333;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .machinery-name-banner {
-                font-size: 2.5rem;
-            }
-
-            .centered-title-element {
-                font-size: 2rem;
-            }
-
-            .featured-machinery-display {
-                width: 280px;
-                height: 280px;
-            }
-
-            .repository-data-container,
-            .gateway-submission-wrapper {
-                padding: 30px 20px;
-            }
-        }
+        
 
          /* ========== NAVIGATION BUTTONS SECTION ========== */
         .nav-section {
@@ -518,16 +420,11 @@
             background: white;
         }
         .nav-buttons {
-            max-width: 700px;
-            margin: 0 auto;
+            width: 100%;
             display: flex;
-            gap: 15px;
             justify-content: space-between;
             align-items: center;
-        }
-        .nav-buttons-right {
-            display: flex;
-            gap: 15px;
+            position: relative;
         }
         .nav-button {
             padding: 14px 30px;
@@ -548,27 +445,102 @@
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(255, 102, 0, 0.3);
         }
-
+        .nav-button:nth-child(2) {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         /* Responsive Design */
         @media (max-width: 768px) {
-            .section-title {
-                font-size: 2rem;
-            }
-            .cta-container {
-                padding: 30px 20px;
-            }
             .nav-buttons {
                 flex-direction: column;
-            }
-            .nav-buttons-right {
-                flex-direction: column;
-                width: 100%;
-            }
+                gap: 15px;
+        }
             .nav-button {
                 width: 100%;
                 text-align: center;
+                position: static !important;
+                transform: none !important;
+            }
+}
+
+        /* WhatsApp Fixed Button */
+        .whatsapp-float {
+            position: sticky;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            border-radius: 50px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            margin-left: auto;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #20BA5A;
+            transform: scale(1.1);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        /* Pulse Animation */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
             }
         }
+
+        .whatsapp-float.pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .whatsapp-float {
+                width: 55px;
+                height: 55px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .whatsapp-float svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        /* footer */
+    footer{
+      background: linear-gradient(180deg,#071018,#08121a);
+      color: #dfeeff;
+      padding: 3.2rem 1rem;
+      border-top: 1px solid rgba(255,255,255,0.03);
+    }
+    .footer a{ color: #dfeeff; text-decoration:none; }
+    .footer a:hover{ color: var(--accent); }
+
+    /* responsive tweaks */
+    @media (max-width: 768px){
+      .hero{ min-height:64vh; padding-bottom:2rem; }
+      .product-img{ height:180px; }
+    }
     </style>
 </head>
 <body>
@@ -614,7 +586,7 @@
             <h1 class="machinery-name-banner">Hydraulic Excavator HD-360</h1>
             <p class="catch-phrase-line">Unmatched Digging Power & Precision for Heavy Construction</p>
             <div class="conversion-buttons-cluster">
-                <a href="#contact" class="interactive-cta-link">Get Quote</a>
+                <a href="Getquote.html" class="interactive-cta-link">Get Quote</a>
                 <a href="Contact.html" class="interactive-cta-link ghost-variant">Contact Us</a>
             </div>
         </div>
@@ -782,52 +754,76 @@
         </div>
     </section>
 
-    <!-- ========== 7. ENGAGEMENT GATEWAY SECTION ========== -->
-    <section class="engagement-gateway-section" id="contact">
-        <div class="gateway-submission-wrapper">
-            <h2 class="centered-title-element">Request a Quote</h2>
-            <p style="text-align: center; margin-bottom: 2rem; color: #666;">Complete the form and our heavy equipment specialists will provide detailed pricing and specifications within 24 hours.</p>
-            <form class="interactive-submission-form">
-                <div class="data-collection-unit">
-                    <label for="username">Full Name *</label>
-                    <input type="text" id="username" name="username" required placeholder="Enter your full name">
-                </div>
-                <div class="data-collection-unit">
-                    <label for="useremail">Email Address *</label>
-                    <input type="email" id="useremail" name="useremail" required placeholder="your.email@example.com">
-                </div>
-                <div class="data-collection-unit">
-                    <label for="userphone">Phone Number *</label>
-                    <input type="tel" id="userphone" name="userphone" required placeholder="+91 XXXXX XXXXX">
-                </div>
-                <div class="data-collection-unit">
-                    <label for="quantity">Quantity Needed</label>
-                    <select id="quantity" name="quantity">
-                        <option>1 Unit</option>
-                        <option>2 Units</option>
-                        <option>3-5 Units</option>
-                        <option>5+ Units</option>
-                    </select>
-                </div>
-                <div class="data-collection-unit">
-                    <label for="notes">Project Details</label>
-                    <textarea id="notes" name="notes" placeholder="Tell us about your project requirements and application..."></textarea>
-                </div>
-                <button type="submit" class="final-action-trigger">Request Quote Now</button>
-            </form>
-        </div>
-    </section>
+    
+   <!-- ========== NAVIGATION BUTTONS SECTION ========== -->
+<section class="nav-section">
+    <div class="nav-buttons">
+        <a href="cranes.html" class="nav-button"> <--Previous Product</a>
+        <a href="Getquote.html" class="nav-button">Request Quote</a>
+        <a href="loaders.html" class="nav-button next-button">Next Product--> </a>
+    </div>
+</section>
 
-    <!-- ========== NAVIGATION BUTTONS SECTION ========== -->
-    <section class="nav-section">
-        <div class="nav-buttons">
-            <a href="cranes.html" class="nav-button">Previous Product</a>
-            <div class="nav-buttons-right">
-                <a href="index.html" class="nav-button">Back to Home</a>
-                <a href="loaders.html" class="nav-button">Next Product</a>
-            </div>
+    <!-- Fixed WhatsApp Button -->
+    <a href="https://wa.me/918825480950?text=Hi!%20I'm%20interested%20in%20your%20services" 
+       class="whatsapp-float pulse" 
+       target="_blank"
+       title="Chat on WhatsApp">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.267 1.414 1.414-5.267-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.589 6.179-13.768 13.768-13.768s13.768 6.179 13.768 13.768-6.179 13.592-13.944 13.592zM21.92 18.304c-0.352-0.176-2.085-1.029-2.408-1.147s-0.558-0.176-0.793 0.176c-0.235 0.352-0.911 1.147-1.117 1.382s-0.411 0.264-0.763 0.088c-0.352-0.176-1.485-0.547-2.827-1.744-1.045-0.931-1.751-2.082-1.957-2.434s-0.022-0.542 0.154-0.718c0.158-0.158 0.352-0.411 0.528-0.617s0.235-0.352 0.352-0.587c0.117-0.235 0.059-0.44-0.029-0.617s-0.793-1.911-1.088-2.619c-0.287-0.689-0.578-0.596-0.793-0.607-0.205-0.010-0.44-0.012-0.675-0.012s-0.617 0.088-0.94 0.44c-0.323 0.352-1.235 1.205-1.235 2.939s1.264 3.409 1.44 3.645c0.176 0.235 2.492 3.805 6.037 5.337 0.844 0.366 1.502 0.583 2.014 0.747 0.847 0.267 1.617 0.229 2.227 0.139 0.679-0.102 2.085-0.852 2.379-1.675s0.294-1.529 0.206-1.675c-0.088-0.146-0.323-0.234-0.675-0.41z"/>
+        </svg>
+    </a> 
+
+    <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container" style="max-width:var(--container-width);">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="images/logo1.png" alt="SCA" style="height:60px;">
+          <p class="mt-3" style="color:var(--muted)">SCA Heavy Equipment Pvt. Ltd is led by Mr. S. Rajagopal. With expertise in Engineering, we deliver excellence through innovation and motivation.</p>
         </div>
-    </section>
+
+        <div class="col-md-2">
+          <h6>Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Experience.html">About</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6>Products</h6>
+          <ul class="list-unstyled">
+            <li><a href="products.html">Forklift Range</a></li>
+            <li><a href="Reachstacker CS08.html">Reachstacker CS08-5</a></li>
+            <li><a href="AD Series.html">AD Series Reachstacker</a></li>
+            <li><a href="AE Series High-Voltage Lithium Battery Reachstacker.html">AE Lithium Reachstacker</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3">
+          <h6>Why SCA</h6>
+          <ul class="list-unstyled">
+            <li><a href="company.html">Company</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="Milestones.html">Milestones</a></li>
+            <li><a href="certificates.html">Certificates</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <hr style="border-top:1px solid rgba(255,255,255,0.04); margin:1.6rem 0;">
+
+      <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+        <small style="color:var(--muted)">Copyright © 2025 SCA Heavy Equipments</small>
+        <div class="mt-2 mt-md-0">
+          Powered by <a href="https://slnetworks.in" target="_blank" rel="noopener noreferrer">slnetworks.in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
