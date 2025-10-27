@@ -403,142 +403,145 @@
 }
 
 /* OUR Products*/
-    .containers {
-            max-width: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 60px 20px;
-            background-color: rgb(0, 0, 0);
-        }
+.containers {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 60px 20px;
+    background-color: rgb(0, 0, 0);
+}
+.inner-containers {
+    max-width: 1300px; /* Increased for better spacing */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+.section-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.product-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px; /* Adequate gap to prevent overlap */
+    align-items: center;
+    margin-bottom: 100px;
+}
+.image-stack {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    max-width: 500px; /* Contain the stacked images */
+}
 
-        .inner-containers {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+/* For images on the LEFT side */
+.product-section .image-stack:first-child {
+    margin-left: auto; /* Push to the right side of its column */
+    margin-right: 0;
+}
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
+/* For images on the RIGHT side */
+.product-section .image-stack:last-child {
+    margin-right: auto; /* Push to the left side of its column */
+    margin-left: 0;
+}
 
-        .section-header h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
+.image-stack img {
+    position: absolute;
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(246, 243, 243, 0.2);
+    transition: transform 0.3s ease;
+}
+.image-stack img:nth-child(1) {
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+.image-stack img:nth-child(2) {
+    top: 60px;
+    left: 80px;
+    z-index: 2;
+}
+.image-stack img:nth-child(3) {
+    top: 120px;
+    left: 160px;
+    z-index: 1;
+}
+.image-stack:hover img:nth-child(1) {
+    transform: translate(-10px, -10px);
+}
+.image-stack:hover img:nth-child(2) {
+    transform: translate(-5px, -5px);
+}
+.image-stack:hover img:nth-child(3) {
+    transform: translate(5px, 5px);
+}
 
-        .product-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-            margin-bottom: 100px;
-        }
+.content-block {
+    padding: 0 20px; /* Add padding to content */
+}
 
-        .image-stack {
-            position: relative;
-            height: 400px;
-        }
-
-        .image-stack img {
-            position: absolute;
-            width: 280px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(246, 243, 243, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .image-stack img:nth-child(1) {
-            top: 0;
-            left: 0;
-            z-index: 3;
-        }
-
-        .image-stack img:nth-child(2) {
-            top: 60px;
-            left: 80px;
-            z-index: 2;
-        }
-
-        .image-stack img:nth-child(3) {
-            top: 120px;
-            left: 160px;
-            z-index: 1;
-        }
-
-        .image-stack:hover img:nth-child(1) {
-            transform: translate(-10px, -10px);
-        }
-
-        .image-stack:hover img:nth-child(2) {
-            transform: translate(-5px, -5px);
-        }
-
-        .image-stack:hover img:nth-child(3) {
-            transform: translate(5px, 5px);
-        }
-
-        .content-block h2 {
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin-bottom: 25px;
-            font-weight: 700;
-        }
-
-        .content-block p {
-            font-size: 1.1rem;
-            color: #ffffff;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        .product-button {
-            display: inline-block;
-            background: #ff6b35;
-            color: white;
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            border-radius: 8px;
-            margin-top: 25px;
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
-
-        .product-button:hover {
-            background: #e55a2b;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
-        }
-
-        @media (max-width: 968px) {
-            .product-section {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .image-stack {
-                height: 350px;
-                margin: 0 auto;
-                max-width: 400px;
-            }
-
-            .image-stack img {
-                width: 240px;
-                height: 180px;
-            }
-
-            .section-header h1 {
-                font-size: 2.5rem;
-            }
-
-            .content-block h2 {
-                font-size: 1.8rem;
-            }
-        }
+.content-block h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.content-block p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+.product-button {
+    display: inline-block;
+    background: #ff6b35;
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.product-button:hover {
+    background: #e55a2b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(255, 107, 53, 0.3);
+}
+@media (max-width: 968px) {
+    .product-section {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .image-stack {
+        height: 350px;
+        margin: 0 auto !important;
+        max-width: 400px;
+    }
+    .image-stack img {
+        width: 240px;
+        height: 180px;
+    }
+    .section-header h1 {
+        font-size: 2.5rem;
+    }
+    .content-block h2 {
+        font-size: 1.8rem;
+    }
+    .content-block {
+        padding: 0;
+    }
+}
 
 
   /* Gallery */
@@ -554,6 +557,14 @@
             color: #000000;
             margin-bottom: 50px;
             letter-spacing: 2px;
+        }
+        .gallery-desc {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
         }
 
         .gallery-wrapper {
@@ -989,9 +1000,10 @@
 <!-- gallery -->
     <section class="gallery-section">
         <h1 class="gallery-title">OUR GALLERY </h1>
-        <h4><p>fghjkl gdwbhjksmn, ihujikml bjnkl vbhjnkl </p></h4>
-        
-        
+        <p class="gallery-desc">
+        Explore our collection of premium material handling solutions,<br>
+        showcasing innovation, design, and excellence in every detail.
+        </p>       
         <div class="gallery-wrapper">
             <div class="gallery-track">
                 <!-- First set of images -->
