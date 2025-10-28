@@ -116,7 +116,7 @@
       }
     }
 
-    /* HERO */
+     /* HERO */
     .hero {
       position: relative;
       min-height: 72vh;
@@ -206,6 +206,73 @@
     }
     .stat h4{ margin:0; color: #fff; font-weight:700; }
     .stat p{ margin:0; color: var(--muted); font-size:0.88rem; }
+
+    /* Hero Section overlap image - fills entire card */
+.card-modern .product-img {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-modern .card-body {
+  padding: 20px;
+  background: #000000;
+}
+
+.card-modern .card-title {
+  color: #000000;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card-modern .card-text {
+  color: #666666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Cards overlap layout - 3D perspective style */
+.cards-overlap-container {
+  position: relative;
+  height: 430px;
+  perspective: 1500px;
+  transform-style: preserve-3d;
+}
+
+.card-overlap {
+  position: absolute;
+  width: 240px;
+}
+
+/* Left card - angled left */
+.card-overlap:nth-child(1) {
+  top: 40%;
+  left: -80px;
+  transform: translateY(-50%) translateZ(-100px) rotateY(25deg) scale(0.85);
+  z-index: 1;
+}
+
+/* Center card - main focus */
+.card-overlap:nth-child(2) {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(50px) scale(1.1);
+  z-index: 3;
+}
+
+/* Right card - angled right */
+.card-overlap:nth-child(3) {
+  top: 40%;
+  right: -80px;
+  transform: translateY(-50%) translateZ(-100px) rotateY(-25deg) scale(0.85);
+  z-index: 1;
+}
+
+
 
     /* under hero About section */
     .containeer {
@@ -337,70 +404,6 @@
             }
         }
 
-/* Hero Section overlap image - fills entire card */
-.card-modern .product-img {
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-.card-modern .card-body {
-  padding: 20px;
-  background: #000000;
-}
-
-.card-modern .card-title {
-  color: #000000;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.card-modern .card-text {
-  color: #666666;
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
-
-/* Cards overlap layout - 3D perspective style */
-.cards-overlap-container {
-  position: relative;
-  height: 430px;
-  perspective: 1500px;
-  transform-style: preserve-3d;
-}
-
-.card-overlap {
-  position: absolute;
-  width: 240px;
-}
-
-/* Left card - angled left */
-.card-overlap:nth-child(1) {
-  top: 40%;
-  left: -80px;
-  transform: translateY(-50%) translateZ(-100px) rotateY(25deg) scale(0.85);
-  z-index: 1;
-}
-
-/* Center card - main focus */
-.card-overlap:nth-child(2) {
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%) translateZ(50px) scale(1.1);
-  z-index: 3;
-}
-
-/* Right card - angled right */
-.card-overlap:nth-child(3) {
-  top: 40%;
-  right: -80px;
-  transform: translateY(-50%) translateZ(-100px) rotateY(-25deg) scale(0.85);
-  z-index: 1;
-}
 
 /* OUR Products*/
 .containers {
