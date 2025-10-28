@@ -326,49 +326,57 @@
         }
 
         /* ============================================
-           MAP SECTION
-        ============================================ */
-        .map-section {
-            background: #000;
-            padding: 80px 20px;
-        }
+   MAP SECTION
+   ============================================ */
+.map-section {
+    background: #000;
+    padding: 80px 0; /* Changed from padding: 80px 20px */
+}
 
-        .map-section .section-title {
-            color: #fff;
-        }
+.map-section .section-title {
+    color: #fff;
+    padding: 0 20px; /* Add padding only to title */
+    max-width: 1200px;
+    margin: 0 auto 40px; /* Center title and add bottom margin */
+}
 
-        .map-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(255,255,255,0.1);
-        }
+.map-container {
+    width: 100%; /* Changed from max-width: 1200px */
+    margin: 0;
+    border-radius: 0; /* Remove border radius for full width */
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(255,255,255,0.1);
+}
 
-        .map-container iframe {
-            width: 100%;
-            height: 450px;
-            border: none;
-        }
+.map-container iframe {
+    width: 100%;
+    height: 500px; /* Increased height for better view */
+    border: none;
+}
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-section h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-section p {
-                font-size: 1.1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .form-container {
-                padding: 30px 20px;
-            }
-        }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .map-section {
+        padding: 60px 0;
+    }
+    
+    .map-container iframe {
+        height: 400px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .form-container {
+        padding: 30px 20px;
+    }
+}
 
         /* WhatsApp Fixed Button */
         .whatsapp-float {
@@ -468,7 +476,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Products</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="product.html">Fork Lift Range</a></li>
+              <li><a class="dropdown-item" href="product.html">Overview</a></li>
               <li><a class="dropdown-item" href="forklift.html">Fork Lift Trucks</a></li>
               <li><a class="dropdown-item" href="reach-stacker.html">Reach Stackers</a></li>
               <li><a class="dropdown-item" href="cranes.html">Industrial Cranes</a></li>
@@ -573,6 +581,20 @@
     </section>
 
     <!-- ============================================
+         MAP LOCATION SECTION
+    ============================================ -->
+    <section class="map-section">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.058841728662!2d77.50924731483034!3d13.036933716562398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDAyJzEzLjAiTiA3N8KwMzAnNDIuNiJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- ============================================
          SEND MESSAGE FORM SECTION
     ============================================ -->
     <section class="form-section">
@@ -609,20 +631,6 @@
         </div>
     </section>
 
-    <!-- ============================================
-         MAP LOCATION SECTION
-    ============================================ -->
-    <section class="map-section">
-        <h2 class="section-title">Our Location</h2>
-        <div class="map-container">
-            <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8094887867967!2d77.5087429!3d13.0364232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3cdeb3a3216f%3A0x335e46841b1f4676!2s10A%2C%202nd%20Phase%2C%20Vidya%20Nagar%2C%20Peenya%2C%20Bengaluru%2C%20Karnataka%20560057%2C%20India!5e0!3m2!1sen!2sus!4v1698765432100!5m2!1sen!2sus" 
-                allowfullscreen="" 
-                loading="lazy" 
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-    </section>
 
     <!-- Fixed WhatsApp Button -->
     <a href="https://wa.me/918825480950?text=Hi!%20I'm%20interested%20in%20your%20services" 
